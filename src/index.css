@@ -86,27 +86,52 @@ html {
 .netflix-scroll {
   -webkit-overflow-scrolling: touch;
   scroll-behavior: smooth;
-  scroll-snap-type: x proximity;
   overscroll-behavior-x: contain;
   scrollbar-width: none;
   -ms-overflow-style: none;
+  will-change: scroll-position;
+  touch-action: pan-x;
 }
 
 .netflix-scroll::-webkit-scrollbar {
   display: none;
 }
 
+/* Ensure flex container behavior */
+.netflix-scroll {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.netflix-scroll > * {
+  flex-shrink: 0;
+  pointer-events: auto;
+}
+
 /* Enhanced mobile scrolling */
 @media (max-width: 768px) {
   .netflix-scroll {
-    scroll-snap-type: none;
     -webkit-overflow-scrolling: touch;
-    scroll-behavior: auto;
+    scroll-behavior: smooth;
+    touch-action: pan-x;
+    overscroll-behavior-x: contain;
   }
 
   .netflix-scroll::-webkit-scrollbar {
     height: 0px;
     display: none;
+  }
+
+  /* Ensure full height touch area on mobile */
+  .netflix-scroll {
+    min-height: 280px;
+    padding-top: 8px;
+    padding-bottom: 24px;
+  }
+
+  /* Disable hover effects on touch devices */
+  .group:hover .opacity-0 {
+    opacity: 0 !important;
   }
 }
 

@@ -66,15 +66,6 @@ const Home = () => {
           category="sci-fi"
         />
 
-        {/* Non-Fiction */}
-        <NetflixBookRow
-          title="Non-Fiction"
-          books={booksData.nonfiction}
-          onDownload={handleDownload}
-          category="non-fiction"
-          size="normal"
-        />
-
         {/* Popular Categories Section */}
         <section className="py-16 px-4 md:px-12">
           <h2 className="text-white text-2xl md:text-3xl font-bold mb-8">
@@ -111,12 +102,6 @@ const Home = () => {
                 path: "/sci-fi",
                 emoji: "🚀",
                 color: "from-blue-500 to-cyan-600",
-              },
-              {
-                name: "Non-Fiction",
-                path: "/non-fiction",
-                emoji: "📖",
-                color: "from-green-500 to-teal-600",
               },
             ].map((category) => (
               <Link

@@ -7,10 +7,13 @@ const BookCard = ({ book, onDownload, size = "normal" }) => {
   };
 
   return (
-    <div className="group relative flex-shrink-0 cursor-pointer px-1 py-2">
+    <div className="group relative flex-shrink-0 cursor-pointer px-1 py-2 touch-manipulation">
       <div
         className={`${cardSizes[size]} relative overflow-hidden rounded-md bg-gray-800 shadow-lg transition-transform duration-200 hover:scale-105 hover:z-20 hover:shadow-xl mx-auto`}
-        style={{ transformOrigin: "center center" }}
+        style={{
+          transformOrigin: "center center",
+          touchAction: "manipulation",
+        }}
       >
         {/* Book Cover */}
         <img

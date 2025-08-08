@@ -29,7 +29,7 @@ const BookRow = ({ title, books, onDownload, size = "normal", category }) => {
     }
   };
 
-  const checkScrollNeeded = () => {
+  const checkScrollNeeded = useCallback(() => {
     const container = scrollContainerRef.current;
     if (container) {
       const isScrollable = container.scrollWidth > container.clientWidth;
@@ -40,7 +40,7 @@ const BookRow = ({ title, books, onDownload, size = "normal", category }) => {
           container.scrollLeft < container.scrollWidth - container.clientWidth
       );
     }
-  };
+  }, []);
 
   const handleScroll = useCallback(() => {
     const container = scrollContainerRef.current;
@@ -72,7 +72,7 @@ const BookRow = ({ title, books, onDownload, size = "normal", category }) => {
       clearTimeout(resizeTimeout);
       window.removeEventListener("resize", handleResize);
     };
-  }, [books, title]);
+  }, [books, checkScrollNeeded]);
 
   // Also check when images finish loading
   useEffect(() => {
@@ -96,7 +96,7 @@ const BookRow = ({ title, books, onDownload, size = "normal", category }) => {
         }
       });
     }
-  }, [books]);
+  }, [books, checkScrollNeeded]);
 
   return (
     <div className="relative group mb-12">
@@ -162,12 +162,17 @@ const BookRow = ({ title, books, onDownload, size = "normal", category }) => {
       )}
 
       {/* Books Container */}
-      <div className="max-w-screen-2xl mx-auto">
+      <div className="max-w-screen-2xl mx-auto relative">
         <div
           ref={scrollContainerRef}
           onScroll={handleScroll}
           onLoad={checkScrollNeeded}
-          className="flex gap-3 sm:gap-4 md:gap-4 overflow-x-auto netflix-scroll px-2 sm:px-4 md:px-12 pb-6 pt-2"
+          className="flex gap-3 sm:gap-4 md:gap-4 overflow-x-auto netflix-scroll px-2 sm:px-4 md:px-12 pb-6 pt-2 touch-pan-x relative z-10"
+          style={{
+            touchAction: "pan-x",
+            WebkitOverflowScrolling: "touch",
+            minHeight: "280px",
+          }}
         >
           {books.map((book) => (
             <NetflixBookCard
