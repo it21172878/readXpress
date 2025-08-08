@@ -16,7 +16,7 @@ const BookRow = ({ title, books, onDownload, size = "normal", category }) => {
       const isMobile = window.innerWidth < 640;
       const isTablet = window.innerWidth < 1024;
       let scrollAmount;
-      
+
       if (isMobile) {
         scrollAmount = direction === "left" ? -200 : 200;
       } else if (isTablet) {
@@ -24,7 +24,7 @@ const BookRow = ({ title, books, onDownload, size = "normal", category }) => {
       } else {
         scrollAmount = direction === "left" ? -400 : 400;
       }
-      
+
       container.scrollBy({ left: scrollAmount, behavior: "smooth" });
     }
   };
@@ -52,7 +52,7 @@ const BookRow = ({ title, books, onDownload, size = "normal", category }) => {
     }
   }, []);
 
-    // Check if scrolling is needed when component mounts or books change
+  // Check if scrolling is needed when component mounts or books change
   useEffect(() => {
     const timer = setTimeout(() => {
       checkScrollNeeded();
@@ -65,12 +65,12 @@ const BookRow = ({ title, books, onDownload, size = "normal", category }) => {
       resizeTimeout = setTimeout(checkScrollNeeded, 150);
     };
 
-    window.addEventListener('resize', handleResize);
+    window.addEventListener("resize", handleResize);
 
     return () => {
       clearTimeout(timer);
       clearTimeout(resizeTimeout);
-      window.removeEventListener('resize', handleResize);
+      window.removeEventListener("resize", handleResize);
     };
   }, [books, title]);
 
@@ -102,7 +102,9 @@ const BookRow = ({ title, books, onDownload, size = "normal", category }) => {
     <div className="relative group mb-12">
       {/* Section Title with See More Button */}
       <div className="flex items-center justify-between mb-4 sm:mb-6 px-2 sm:px-4 md:px-12 max-w-screen-2xl mx-auto">
-        <h2 className="text-white text-lg sm:text-xl md:text-2xl font-bold">{title}</h2>
+        <h2 className="text-white text-lg sm:text-xl md:text-2xl font-bold">
+          {title}
+        </h2>
         {category && (
           <button
             onClick={() => navigate(`/category/${category}`)}

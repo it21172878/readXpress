@@ -103,7 +103,7 @@ html {
     -webkit-overflow-scrolling: touch;
     scroll-behavior: auto;
   }
-  
+
   .netflix-scroll::-webkit-scrollbar {
     height: 0px;
     display: none;
@@ -116,7 +116,7 @@ html {
   .group:hover .group-hover\:scale-110 {
     transform: none !important;
   }
-  
+
   .hover\:scale-105:hover,
   .hover\:scale-110:hover {
     transform: none !important;

@@ -2,7 +2,8 @@ const BookCard = ({ book, onDownload, size = "normal" }) => {
   const cardSizes = {
     small: "w-32 h-48 sm:w-36 sm:h-54 md:w-40 md:h-60",
     normal: "w-36 h-54 sm:w-40 sm:h-60 md:w-44 md:h-66 lg:w-48 lg:h-72",
-    large: "w-40 h-60 sm:w-44 sm:h-66 md:w-48 md:h-72 lg:w-52 lg:h-78 xl:w-56 xl:h-84",
+    large:
+      "w-40 h-60 sm:w-44 sm:h-66 md:w-48 md:h-72 lg:w-52 lg:h-78 xl:w-56 xl:h-84",
   };
 
   return (
@@ -59,7 +60,11 @@ const BookCard = ({ book, onDownload, size = "normal" }) => {
               onClick={() => onDownload(book)}
               className="bg-white text-black px-2 py-1 sm:px-3 sm:py-1 rounded-md text-xs font-semibold hover:bg-gray-200 transition-colors flex items-center gap-1"
             >
-              <svg className="w-2.5 h-2.5 sm:w-3 sm:h-3" fill="currentColor" viewBox="0 0 20 20">
+              <svg
+                className="w-2.5 h-2.5 sm:w-3 sm:h-3"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+              >
                 <path
                   fillRule="evenodd"
                   d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm3.293-7.707a1 1 0 011.414 0L9 10.586V3a1 1 0 112 0v7.586l1.293-1.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z"

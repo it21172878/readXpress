@@ -80,7 +80,9 @@ const CategoryPage = ({ category, title, emoji }) => {
             <div className="flex items-center gap-3 sm:gap-4 justify-center lg:justify-end">
               {/* Sort */}
               <div className="flex items-center gap-2 sm:gap-3">
-                <label className="text-gray-300 font-medium text-sm sm:text-base">Sort by:</label>
+                <label className="text-gray-300 font-medium text-sm sm:text-base">
+                  Sort by:
+                </label>
                 <select
                   value={sortBy}
                   onChange={(e) => setSortBy(e.target.value)}
@@ -183,7 +185,12 @@ const CategoryPage = ({ category, title, emoji }) => {
                                   : "bg-blue-600 hover:bg-blue-700 text-white"
                               }`}
                             >
-                              <svg className="w-2.5 h-2.5 sm:w-3 sm:h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                              <svg
+                                className="w-2.5 h-2.5 sm:w-3 sm:h-3"
+                                fill="none"
+                                stroke="currentColor"
+                                viewBox="0 0 24 24"
+                              >
                                 <path
                                   strokeLinecap="round"
                                   strokeLinejoin="round"

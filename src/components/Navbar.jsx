@@ -12,7 +12,11 @@ const Navbar = () => {
     { name: "Fantasy", path: "/category/fantasy", altPaths: ["/fantasy"] },
     { name: "Mystery", path: "/category/mystery", altPaths: ["/mystery"] },
     { name: "Sci-Fi", path: "/category/sci-fi", altPaths: ["/sci-fi"] },
-    { name: "Non-Fiction", path: "/category/non-fiction", altPaths: ["/non-fiction"] },
+    {
+      name: "Non-Fiction",
+      path: "/category/non-fiction",
+      altPaths: ["/non-fiction"],
+    },
   ];
 
   // Function to check if a nav item is active
@@ -100,8 +104,8 @@ const Navbar = () => {
                     key={item.name}
                     to={item.path}
                     className={`flex items-center justify-between px-3 py-2.5 text-white hover:text-red-400 transition-all duration-200 rounded-lg text-sm ${
-                      isActive 
-                        ? "text-red-400 bg-red-600/10 border border-red-600/20 font-semibold" 
+                      isActive
+                        ? "text-red-400 bg-red-600/10 border border-red-600/20 font-semibold"
                         : "hover:bg-gray-800/50"
                     }`}
                     onClick={() => setIsMenuOpen(false)}
