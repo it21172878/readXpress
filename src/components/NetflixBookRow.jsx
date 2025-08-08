@@ -167,9 +167,8 @@ const BookRow = ({ title, books, onDownload, size = "normal", category }) => {
           ref={scrollContainerRef}
           onScroll={handleScroll}
           onLoad={checkScrollNeeded}
-          className="flex gap-3 sm:gap-4 md:gap-4 overflow-x-auto netflix-scroll px-2 sm:px-4 md:px-12 pb-6 pt-2 touch-pan-x relative z-10"
+          className="flex gap-3 sm:gap-4 md:gap-4 overflow-x-auto netflix-scroll px-2 sm:px-4 md:px-12 pb-6 pt-2 relative z-10"
           style={{
-            touchAction: "pan-x",
             WebkitOverflowScrolling: "touch",
             minHeight: "280px",
           }}

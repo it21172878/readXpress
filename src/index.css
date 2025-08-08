@@ -90,7 +90,6 @@ html {
   scrollbar-width: none;
   -ms-overflow-style: none;
   will-change: scroll-position;
-  touch-action: pan-x;
 }
 
 .netflix-scroll::-webkit-scrollbar {
@@ -113,7 +112,6 @@ html {
   .netflix-scroll {
     -webkit-overflow-scrolling: touch;
     scroll-behavior: smooth;
-    touch-action: pan-x;
     overscroll-behavior-x: contain;
   }
 
@@ -122,16 +120,10 @@ html {
     display: none;
   }
 
-  /* Ensure full height touch area on mobile */
+  /* Ensure proper touch areas without restricting page scroll */
   .netflix-scroll {
-    min-height: 280px;
     padding-top: 8px;
     padding-bottom: 24px;
-  }
-
-  /* Disable hover effects on touch devices */
-  .group:hover .opacity-0 {
-    opacity: 0 !important;
   }
 }
 
