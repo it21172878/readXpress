@@ -21,19 +21,19 @@ const BookCard = ({ book, onDownload, size = "normal" }) => {
           className="w-full h-full object-cover transition-transform duration-200 group-hover:scale-105"
         />
 
-        {/* Gradient Overlay */}
-        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+        {/* Gradient Overlay - Always visible for better text readability */}
+        <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent" />
 
         {/* Category Badge */}
-        <div className="absolute top-2 right-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+        <div className="absolute top-2 right-2 z-20">
           <span className="bg-red-600 text-white text-xs px-2 py-1 rounded-md font-semibold">
             {book.category}
           </span>
         </div>
 
-        {/* Hover Content */}
-        <div className="absolute bottom-0 left-0 right-0 p-3 transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
-          <h3 className="text-white font-bold text-sm mb-1 line-clamp-2">
+        {/* Book Information - Always visible */}
+        <div className="absolute bottom-0 left-0 right-0 p-2 sm:p-3 z-10">
+          <h3 className="text-white font-bold text-xs sm:text-sm mb-1 line-clamp-2">
             {book.title}
           </h3>
           <p className="text-gray-300 text-xs mb-2">by {book.author}</p>
@@ -44,7 +44,7 @@ const BookCard = ({ book, onDownload, size = "normal" }) => {
               {[...Array(5)].map((_, i) => (
                 <svg
                   key={i}
-                  className={`w-3 h-3 ${
+                  className={`w-2.5 h-2.5 sm:w-3 sm:h-3 ${
                     i < book.rating ? "fill-current" : "text-gray-600"
                   }`}
                   viewBox="0 0 20 20"
@@ -75,7 +75,7 @@ const BookCard = ({ book, onDownload, size = "normal" }) => {
               </svg>
               <span className="hidden sm:inline">Download</span>
             </button>
-            <button className="bg-gray-600 text-white p-1 rounded-md hover:bg-gray-500 transition-colors">
+            {/* <button className="bg-gray-600 text-white p-1 rounded-md hover:bg-gray-500 transition-colors">
               <svg
                 className="w-2.5 h-2.5 sm:w-3 sm:h-3"
                 fill="none"
@@ -89,7 +89,7 @@ const BookCard = ({ book, onDownload, size = "normal" }) => {
                   d="M12 6v6m0 0v6m0-6h6m-6 0H6"
                 />
               </svg>
-            </button>
+            </button> */}
           </div>
         </div>
       </div>
