@@ -75,25 +75,25 @@ const Home = () => {
         />
 
         {/* Browse by Genre Section - Enhanced */}
-        <section className="py-20 px-4 md:px-12 max-w-screen-2xl mx-auto relative">
+        <section className="py-12 sm:py-16 md:py-20 px-3 sm:px-4 md:px-12 max-w-screen-2xl mx-auto relative">
           {/* Background Effects */}
           <div className="absolute inset-0 bg-gradient-to-r from-red-900/5 via-transparent to-red-900/5 blur-3xl"></div>
 
           <div className="relative z-10">
             {/* Section Header */}
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-white via-red-100 to-white bg-clip-text text-transparent">
+            <div className="text-center mb-8 sm:mb-12 md:mb-16">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-3 sm:mb-4 bg-gradient-to-r from-white via-red-100 to-white bg-clip-text text-transparent">
                 Browse by Genre
               </h2>
-              <p className="text-gray-400 text-lg max-w-2xl mx-auto">
+              <p className="text-gray-400 text-sm sm:text-base md:text-lg max-w-2xl mx-auto px-4">
                 Discover your next favorite book across our curated collection
                 of genres
               </p>
-              <div className="w-24 h-1 bg-gradient-to-r from-red-600 to-red-400 mx-auto mt-6 rounded-full"></div>
+              <div className="w-16 sm:w-20 md:w-24 h-1 bg-gradient-to-r from-red-600 to-red-400 mx-auto mt-4 sm:mt-6 rounded-full"></div>
             </div>
 
             {/* Genre Cards Grid */}
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 md:gap-8">
               {[
                 {
                   name: "Kids Books",
@@ -163,17 +163,17 @@ const Home = () => {
                   />
 
                   {/* Content */}
-                  <div className="relative p-8 h-48 flex flex-col justify-between">
+                  <div className="relative p-4 sm:p-6 md:p-8 h-40 sm:h-44 md:h-48 flex flex-col justify-between">
                     {/* Top Section */}
                     <div className="flex items-start justify-between">
-                      <div className="text-6xl group-hover:scale-110 transition-transform duration-500 filter drop-shadow-lg">
+                      <div className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl group-hover:scale-110 transition-transform duration-500 filter drop-shadow-lg">
                         {category.emoji}
                       </div>
                       <div className="text-right">
-                        <div className="text-gray-400 text-sm font-medium">
+                        <div className="text-gray-400 text-xs sm:text-sm font-medium">
                           Books
                         </div>
-                        <div className="text-white text-2xl font-bold">
+                        <div className="text-white text-lg sm:text-xl md:text-2xl font-bold">
                           {category.books}
                         </div>
                       </div>
@@ -181,18 +181,18 @@ const Home = () => {
 
                     {/* Bottom Section */}
                     <div>
-                      <h3 className="text-white text-xl font-bold mb-2 group-hover:text-red-300 transition-colors duration-300">
+                      <h3 className="text-white text-base sm:text-lg md:text-xl font-bold mb-1 sm:mb-2 group-hover:text-red-300 transition-colors duration-300">
                         {category.name}
                       </h3>
-                      <p className="text-gray-400 text-sm leading-relaxed group-hover:text-gray-300 transition-colors duration-300">
+                      <p className="text-gray-400 text-xs sm:text-sm leading-relaxed group-hover:text-gray-300 transition-colors duration-300">
                         {category.description}
                       </p>
                     </div>
 
                     {/* Hover Arrow */}
-                    <div className="absolute bottom-4 right-4 opacity-0 group-hover:opacity-100 transform translate-x-2 group-hover:translate-x-0 transition-all duration-300">
+                    <div className="absolute bottom-3 sm:bottom-4 right-3 sm:right-4 opacity-0 group-hover:opacity-100 transform translate-x-2 group-hover:translate-x-0 transition-all duration-300">
                       <svg
-                        className="w-6 h-6 text-red-400"
+                        className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 text-red-400"
                         fill="none"
                         stroke="currentColor"
                         viewBox="0 0 24 24"

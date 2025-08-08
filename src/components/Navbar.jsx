@@ -7,51 +7,64 @@ const Navbar = () => {
 
   const navItems = [
     { name: "Home", path: "/" },
-    { name: "Kids Books", path: "/kids" },
-    { name: "Romance", path: "/romance" },
-    { name: "Fantasy", path: "/fantasy" },
-    { name: "Mystery", path: "/mystery" },
-    { name: "Sci-Fi", path: "/sci-fi" },
-    { name: "Non-Fiction", path: "/non-fiction" },
+    { name: "Kids Books", path: "/category/kids", altPaths: ["/kids"] },
+    { name: "Romance", path: "/category/romance", altPaths: ["/romance"] },
+    { name: "Fantasy", path: "/category/fantasy", altPaths: ["/fantasy"] },
+    { name: "Mystery", path: "/category/mystery", altPaths: ["/mystery"] },
+    { name: "Sci-Fi", path: "/category/sci-fi", altPaths: ["/sci-fi"] },
+    { name: "Non-Fiction", path: "/category/non-fiction", altPaths: ["/non-fiction"] },
   ];
+
+  // Function to check if a nav item is active
+  const isActiveLink = (item) => {
+    if (location.pathname === item.path) return true;
+    if (item.altPaths && item.altPaths.includes(location.pathname)) return true;
+    return false;
+  };
 
   return (
     <nav className="bg-black/95 backdrop-blur-md shadow-2xl border-b border-gray-800 sticky top-0 z-50">
-      <div className="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between h-16">
+      <div className="max-w-screen-2xl mx-auto px-3 sm:px-4 md:px-6 lg:px-8">
+        <div className="flex justify-between h-14 sm:h-16">
           <div className="flex items-center">
-            <Link to="/" className="flex items-center space-x-2">
-              <div className="text-red-600 text-2xl font-bold">
+            <Link to="/" className="flex items-center space-x-1 sm:space-x-2">
+              <div className="text-red-600 text-lg sm:text-xl md:text-2xl font-bold">
                 📚 readXpress
               </div>
             </Link>
           </div>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
-            {navItems.map((item) => (
-              <Link
-                key={item.name}
-                to={item.path}
-                className={`text-gray-300 hover:text-white transition-all duration-200 font-medium hover:scale-105 ${
-                  location.pathname === item.path
-                    ? "text-white border-b-2 border-red-600 scale-105"
-                    : ""
-                }`}
-              >
-                {item.name}
-              </Link>
-            ))}
+          <div className="hidden lg:flex items-center space-x-4 xl:space-x-8">
+            {navItems.map((item) => {
+              const isActive = isActiveLink(item);
+              return (
+                <Link
+                  key={item.name}
+                  to={item.path}
+                  className={`relative text-gray-300 hover:text-white transition-all duration-300 font-medium hover:scale-105 px-2 py-2 rounded-lg text-sm xl:text-base ${
+                    isActive
+                      ? "text-white bg-red-600/20 border border-red-600/30 scale-105 shadow-lg shadow-red-600/20"
+                      : "hover:bg-gray-800/50"
+                  }`}
+                >
+                  {item.name}
+                  {isActive && (
+                    <div className="absolute -bottom-1 left-1/2 transform -translate-x-1/2 w-2 h-2 bg-red-600 rounded-full animate-pulse"></div>
+                  )}
+                </Link>
+              );
+            })}
           </div>
 
           {/* Mobile menu button */}
-          <div className="md:hidden flex items-center">
+          <div className="lg:hidden flex items-center">
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="text-gray-200 hover:text-yellow-400 focus:outline-none transition-colors"
+              className="text-gray-200 hover:text-red-400 focus:outline-none transition-colors p-1"
             >
               <svg
-                className="h-6 w-6"
+                className="h-5 w-5 sm:h-6 sm:w-6"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
@@ -78,20 +91,28 @@ const Navbar = () => {
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <div className="md:hidden">
-            <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-purple-700">
-              {navItems.map((item) => (
-                <Link
-                  key={item.name}
-                  to={item.path}
-                  className={`block px-3 py-2 text-white hover:text-yellow-300 transition-colors duration-200 ${
-                    location.pathname === item.path ? "text-yellow-300" : ""
-                  }`}
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  {item.name}
-                </Link>
-              ))}
+          <div className="lg:hidden">
+            <div className="px-2 pt-2 pb-3 space-y-1 bg-gray-900/95 backdrop-blur-md border-t border-gray-800">
+              {navItems.map((item) => {
+                const isActive = isActiveLink(item);
+                return (
+                  <Link
+                    key={item.name}
+                    to={item.path}
+                    className={`flex items-center justify-between px-3 py-2.5 text-white hover:text-red-400 transition-all duration-200 rounded-lg text-sm ${
+                      isActive 
+                        ? "text-red-400 bg-red-600/10 border border-red-600/20 font-semibold" 
+                        : "hover:bg-gray-800/50"
+                    }`}
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    <span>{item.name}</span>
+                    {isActive && (
+                      <div className="w-2 h-2 bg-red-600 rounded-full animate-pulse"></div>
+                    )}
+                  </Link>
+                );
+              })}
             </div>
           </div>
         )}

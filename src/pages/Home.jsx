@@ -17,7 +17,7 @@ const Home = () => {
       <HeroBanner books={booksData.featured} onDownload={handleDownload} />
 
       {/* Content Sections */}
-      <div className="relative -mt-32 z-20">
+      <div className="relative -mt-32 z-20 pb-8">
         {/* Featured Books */}
         <NetflixBookRow
           title="Featured Books"
@@ -31,6 +31,7 @@ const Home = () => {
           title="Kids Books"
           books={booksData.kids}
           onDownload={handleDownload}
+          category="kids"
         />
 
         {/* Romance */}
@@ -38,6 +39,7 @@ const Home = () => {
           title="Romance"
           books={booksData.romance}
           onDownload={handleDownload}
+          category="romance"
         />
 
         {/* Fantasy */}
@@ -45,6 +47,7 @@ const Home = () => {
           title="Fantasy & Adventure"
           books={booksData.fantasy}
           onDownload={handleDownload}
+          category="fantasy"
         />
 
         {/* Mystery */}
@@ -52,6 +55,7 @@ const Home = () => {
           title="Mystery & Thriller"
           books={booksData.mystery}
           onDownload={handleDownload}
+          category="mystery"
         />
 
         {/* Sci-Fi */}
@@ -59,6 +63,7 @@ const Home = () => {
           title="Science Fiction"
           books={booksData.scifi}
           onDownload={handleDownload}
+          category="sci-fi"
         />
 
         {/* Non-Fiction */}
@@ -66,6 +71,8 @@ const Home = () => {
           title="Non-Fiction"
           books={booksData.nonfiction}
           onDownload={handleDownload}
+          category="non-fiction"
+          size="normal"
         />
 
         {/* Popular Categories Section */}

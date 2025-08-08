@@ -1,21 +1,21 @@
 const BookCard = ({ book, onDownload, size = "normal" }) => {
   const cardSizes = {
-    small: "w-32 h-48",
-    normal: "w-40 h-60",
-    large: "w-48 h-72",
+    small: "w-32 h-48 sm:w-36 sm:h-54 md:w-40 md:h-60",
+    normal: "w-36 h-54 sm:w-40 sm:h-60 md:w-44 md:h-66 lg:w-48 lg:h-72",
+    large: "w-40 h-60 sm:w-44 sm:h-66 md:w-48 md:h-72 lg:w-52 lg:h-78 xl:w-56 xl:h-84",
   };
 
   return (
     <div className="group relative flex-shrink-0 cursor-pointer px-1 py-2">
       <div
-        className={`${cardSizes[size]} relative overflow-hidden rounded-md bg-gray-800 shadow-lg transition-all duration-300 hover:scale-110 hover:z-20 hover:shadow-2xl mx-auto`}
+        className={`${cardSizes[size]} relative overflow-hidden rounded-md bg-gray-800 shadow-lg transition-transform duration-200 hover:scale-105 hover:z-20 hover:shadow-xl mx-auto`}
         style={{ transformOrigin: "center center" }}
       >
         {/* Book Cover */}
         <img
           src={book.coverImage}
           alt={book.title}
-          className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
+          className="w-full h-full object-cover transition-transform duration-200 group-hover:scale-105"
         />
 
         {/* Gradient Overlay */}
@@ -54,23 +54,23 @@ const BookCard = ({ book, onDownload, size = "normal" }) => {
           </div>
 
           {/* Action Buttons */}
-          <div className="flex gap-2">
+          <div className="flex gap-1 sm:gap-2">
             <button
               onClick={() => onDownload(book)}
-              className="bg-white text-black px-3 py-1 rounded-md text-xs font-semibold hover:bg-gray-200 transition-colors flex items-center gap-1"
+              className="bg-white text-black px-2 py-1 sm:px-3 sm:py-1 rounded-md text-xs font-semibold hover:bg-gray-200 transition-colors flex items-center gap-1"
             >
-              <svg className="w-3 h-3" fill="currentColor" viewBox="0 0 20 20">
+              <svg className="w-2.5 h-2.5 sm:w-3 sm:h-3" fill="currentColor" viewBox="0 0 20 20">
                 <path
                   fillRule="evenodd"
                   d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm3.293-7.707a1 1 0 011.414 0L9 10.586V3a1 1 0 112 0v7.586l1.293-1.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z"
                   clipRule="evenodd"
                 />
               </svg>
-              Download
+              <span className="hidden sm:inline">Download</span>
             </button>
             <button className="bg-gray-600 text-white p-1 rounded-md hover:bg-gray-500 transition-colors">
               <svg
-                className="w-3 h-3"
+                className="w-2.5 h-2.5 sm:w-3 sm:h-3"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"

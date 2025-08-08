@@ -37,33 +37,33 @@ const CategoryPage = ({ category, title, emoji }) => {
   return (
     <div className="bg-black min-h-screen">
       {/* Search and Filter Section */}
-      <section className="py-8 bg-gray-900/90 backdrop-blur-sm border-b border-gray-800">
-        <div className="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-6 sm:py-8 bg-gray-900/90 backdrop-blur-sm border-b border-gray-800">
+        <div className="max-w-screen-2xl mx-auto px-3 sm:px-4 md:px-6 lg:px-8">
           {/* Page Title */}
-          <div className="mb-6">
-            <div className="flex items-center gap-3 mb-2">
-              <span className="text-4xl">{emoji}</span>
-              <h1 className="text-3xl md:text-4xl font-bold text-white">
+          <div className="mb-4 sm:mb-6">
+            <div className="flex items-center gap-2 sm:gap-3 mb-2">
+              <span className="text-2xl sm:text-3xl md:text-4xl">{emoji}</span>
+              <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-white">
                 {title}
               </h1>
             </div>
-            <p className="text-gray-400">
+            <p className="text-gray-400 text-sm sm:text-base">
               {books.length} books available • Free downloads
             </p>
           </div>
 
-          <div className="flex flex-col lg:flex-row gap-4 items-center justify-between">
+          <div className="flex flex-col space-y-3 lg:space-y-0 lg:flex-row lg:items-center lg:justify-between gap-3 lg:gap-4">
             {/* Search */}
-            <div className="relative flex-1 max-w-md">
+            <div className="relative flex-1 max-w-full lg:max-w-md">
               <input
                 type="text"
                 placeholder="Search books..."
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
-                className="w-full px-4 py-3 bg-gray-800/50 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent text-white placeholder-gray-400 backdrop-blur-sm"
+                className="w-full px-3 py-2 sm:px-4 sm:py-3 bg-gray-800/50 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent text-white placeholder-gray-400 backdrop-blur-sm text-sm sm:text-base"
               />
               <svg
-                className="absolute right-3 top-3.5 w-5 h-5 text-gray-400"
+                className="absolute right-2 sm:right-3 top-2 sm:top-3.5 w-4 h-4 sm:w-5 sm:h-5 text-gray-400"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
@@ -77,14 +77,14 @@ const CategoryPage = ({ category, title, emoji }) => {
               </svg>
             </div>
 
-            <div className="flex items-center gap-4">
+            <div className="flex items-center gap-3 sm:gap-4 justify-center lg:justify-end">
               {/* Sort */}
-              <div className="flex items-center gap-3">
-                <label className="text-gray-300 font-medium">Sort by:</label>
+              <div className="flex items-center gap-2 sm:gap-3">
+                <label className="text-gray-300 font-medium text-sm sm:text-base">Sort by:</label>
                 <select
                   value={sortBy}
                   onChange={(e) => setSortBy(e.target.value)}
-                  className="px-4 py-3 bg-gray-800/50 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500 text-white backdrop-blur-sm"
+                  className="px-3 py-2 sm:px-4 sm:py-3 bg-gray-800/50 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500 text-white backdrop-blur-sm text-sm sm:text-base"
                 >
                   <option value="title">Title</option>
                   <option value="author">Author</option>
@@ -97,8 +97,8 @@ const CategoryPage = ({ category, title, emoji }) => {
       </section>
 
       {/* Books Section */}
-      <section className="py-12 bg-black">
-        <div className="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-8 sm:py-12 bg-black">
+        <div className="max-w-screen-2xl mx-auto px-3 sm:px-4 md:px-6 lg:px-8">
           {filteredAndSortedBooks.length > 0 ? (
             <div className="space-y-8">
               {/* Books List - Compact unique rows */}
@@ -117,30 +117,30 @@ const CategoryPage = ({ category, title, emoji }) => {
                     {/* Background accent */}
                     <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
 
-                    <div className="relative flex items-center gap-3 p-2.5">
+                    <div className="relative flex items-center gap-2 sm:gap-3 p-2 sm:p-2.5">
                       {/* Book Cover */}
                       <div className="flex-shrink-0 relative">
                         <img
                           src={book.coverImage}
                           alt={book.title}
-                          className="w-20 h-30 object-cover rounded-lg shadow-lg border border-gray-700 group-hover:border-gray-500 transition-all duration-300"
+                          className="w-16 h-24 sm:w-18 sm:h-27 md:w-20 md:h-30 object-cover rounded-lg shadow-lg border border-gray-700 group-hover:border-gray-500 transition-all duration-300"
                         />
                         <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                       </div>
 
                       {/* Book Info */}
                       <div className="flex-1 min-w-0">
-                        <div className="flex items-start justify-between gap-3">
+                        <div className="flex items-start justify-between gap-2 sm:gap-3">
                           <div className="flex-1 min-w-0">
-                            <h3 className="text-base font-bold text-white mb-0.5 truncate group-hover:text-red-300 transition-colors">
+                            <h3 className="text-sm sm:text-base font-bold text-white mb-0.5 sm:mb-1 truncate group-hover:text-red-300 transition-colors leading-tight">
                               {book.title}
                             </h3>
-                            <p className="text-gray-300 text-xs mb-1">
+                            <p className="text-gray-300 text-xs sm:text-sm mb-1">
                               by {book.author}
                             </p>
 
                             {/* Rating and Category in one line */}
-                            <div className="flex items-center gap-3 mb-1">
+                            <div className="flex items-center gap-2 sm:gap-3 mb-1 flex-wrap">
                               <div className="flex items-center gap-1">
                                 <span className="text-yellow-500 text-xs">
                                   ⭐
@@ -166,7 +166,7 @@ const CategoryPage = ({ category, title, emoji }) => {
                             </div>
 
                             {/* Description - single line */}
-                            <p className="text-gray-400 text-xs leading-relaxed truncate">
+                            <p className="text-gray-400 text-xs leading-relaxed truncate hidden sm:block">
                               {book.description}
                             </p>
                           </div>
@@ -175,7 +175,7 @@ const CategoryPage = ({ category, title, emoji }) => {
                           <div className="flex-shrink-0">
                             <button
                               onClick={() => handleDownload(book)}
-                              className={`px-3 py-1.5 rounded-md font-medium text-xs transition-all duration-200 flex items-center gap-1.5 hover:scale-105 active:scale-95 ${
+                              className={`px-2 py-1 sm:px-3 sm:py-1.5 rounded-md font-medium text-xs transition-all duration-200 flex items-center gap-1 sm:gap-1.5 hover:scale-105 active:scale-95 ${
                                 index % 3 === 0
                                   ? "bg-red-600 hover:bg-red-700 text-white"
                                   : index % 3 === 1
@@ -183,12 +183,7 @@ const CategoryPage = ({ category, title, emoji }) => {
                                   : "bg-blue-600 hover:bg-blue-700 text-white"
                               }`}
                             >
-                              <svg
-                                className="w-3 h-3"
-                                fill="none"
-                                stroke="currentColor"
-                                viewBox="0 0 24 24"
-                              >
+                              <svg className="w-2.5 h-2.5 sm:w-3 sm:h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path
                                   strokeLinecap="round"
                                   strokeLinejoin="round"
@@ -196,7 +191,7 @@ const CategoryPage = ({ category, title, emoji }) => {
                                   d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
                                 />
                               </svg>
-                              Download
+                              <span className="hidden sm:inline">Download</span>
                             </button>
                           </div>
                         </div>

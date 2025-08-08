@@ -1,4 +1,4 @@
-import { useState, useRef, useEffect } from "react";
+import { useState, useRef, useEffect, useCallback } from "react";
 import { useNavigate } from "react-router-dom";
 import NetflixBookCard from "./NetflixBookCard";
 
@@ -12,7 +12,19 @@ const BookRow = ({ title, books, onDownload, size = "normal", category }) => {
   const scroll = (direction) => {
     const container = scrollContainerRef.current;
     if (container) {
-      const scrollAmount = direction === "left" ? -400 : 400;
+      // Responsive scroll amount based on screen size
+      const isMobile = window.innerWidth < 640;
+      const isTablet = window.innerWidth < 1024;
+      let scrollAmount;
+      
+      if (isMobile) {
+        scrollAmount = direction === "left" ? -200 : 200;
+      } else if (isTablet) {
+        scrollAmount = direction === "left" ? -300 : 300;
+      } else {
+        scrollAmount = direction === "left" ? -400 : 400;
+      }
+      
       container.scrollBy({ left: scrollAmount, behavior: "smooth" });
     }
   };
@@ -30,7 +42,7 @@ const BookRow = ({ title, books, onDownload, size = "normal", category }) => {
     }
   };
 
-  const handleScroll = () => {
+  const handleScroll = useCallback(() => {
     const container = scrollContainerRef.current;
     if (container) {
       setShowLeftArrow(container.scrollLeft > 0);
@@ -38,25 +50,29 @@ const BookRow = ({ title, books, onDownload, size = "normal", category }) => {
         container.scrollLeft < container.scrollWidth - container.clientWidth
       );
     }
-  };
+  }, []);
 
-  // Check if scrolling is needed when component mounts or books change
+    // Check if scrolling is needed when component mounts or books change
   useEffect(() => {
     const timer = setTimeout(() => {
       checkScrollNeeded();
-    }, 100); // Small delay to ensure images are loaded and layout is complete
+    }, 100);
 
-    // Re-check on window resize
+    // Re-check on window resize with debouncing
+    let resizeTimeout;
     const handleResize = () => {
-      setTimeout(checkScrollNeeded, 100); // Small delay to ensure layout is updated
+      clearTimeout(resizeTimeout);
+      resizeTimeout = setTimeout(checkScrollNeeded, 150);
     };
 
-    window.addEventListener("resize", handleResize);
+    window.addEventListener('resize', handleResize);
+
     return () => {
       clearTimeout(timer);
-      window.removeEventListener("resize", handleResize);
+      clearTimeout(resizeTimeout);
+      window.removeEventListener('resize', handleResize);
     };
-  }, [books]);
+  }, [books, title]);
 
   // Also check when images finish loading
   useEffect(() => {
@@ -85,23 +101,23 @@ const BookRow = ({ title, books, onDownload, size = "normal", category }) => {
   return (
     <div className="relative group mb-12">
       {/* Section Title with See More Button */}
-      <div className="flex items-center justify-between mb-6 px-4 md:px-12 max-w-screen-2xl mx-auto">
-        <h2 className="text-white text-xl md:text-2xl font-bold">{title}</h2>
+      <div className="flex items-center justify-between mb-4 sm:mb-6 px-2 sm:px-4 md:px-12 max-w-screen-2xl mx-auto">
+        <h2 className="text-white text-lg sm:text-xl md:text-2xl font-bold">{title}</h2>
         {category && (
           <button
             onClick={() => navigate(`/category/${category}`)}
-            className="text-red-500 hover:text-red-400 text-sm md:text-base font-medium transition-colors duration-200 hover:underline"
+            className="text-red-500 hover:text-red-400 text-xs sm:text-sm md:text-base font-medium transition-colors duration-200 hover:underline"
           >
             See More →
           </button>
         )}
       </div>
 
-      {/* Left Arrow - only show if scrolling is needed */}
+      {/* Left Arrow - hidden on mobile, show on desktop */}
       {needsScrolling && showLeftArrow && (
         <button
           onClick={() => scroll("left")}
-          className="absolute left-2 top-1/2 transform -translate-y-1/2 z-30 bg-black/80 hover:bg-black/95 text-white p-3 rounded-full opacity-0 group-hover:opacity-100 transition-all duration-300 backdrop-blur-sm border border-gray-600 hover:border-white hover:scale-110"
+          className="hidden md:block absolute left-2 top-1/2 transform -translate-y-1/2 z-30 bg-black/80 hover:bg-black/95 text-white p-3 rounded-full opacity-0 group-hover:opacity-100 transition-all duration-300 backdrop-blur-sm border border-gray-600 hover:border-white hover:scale-110"
           style={{ zIndex: 35 }}
         >
           <svg
@@ -120,11 +136,11 @@ const BookRow = ({ title, books, onDownload, size = "normal", category }) => {
         </button>
       )}
 
-      {/* Right Arrow - only show if scrolling is needed */}
+      {/* Right Arrow - hidden on mobile, show on desktop */}
       {needsScrolling && showRightArrow && (
         <button
           onClick={() => scroll("right")}
-          className="absolute right-2 top-1/2 transform -translate-y-1/2 z-30 bg-black/80 hover:bg-black/95 text-white p-3 rounded-full opacity-0 group-hover:opacity-100 transition-all duration-300 backdrop-blur-sm border border-gray-600 hover:border-white hover:scale-110"
+          className="hidden md:block absolute right-2 top-1/2 transform -translate-y-1/2 z-30 bg-black/80 hover:bg-black/95 text-white p-3 rounded-full opacity-0 group-hover:opacity-100 transition-all duration-300 backdrop-blur-sm border border-gray-600 hover:border-white hover:scale-110"
           style={{ zIndex: 35 }}
         >
           <svg
@@ -149,12 +165,7 @@ const BookRow = ({ title, books, onDownload, size = "normal", category }) => {
           ref={scrollContainerRef}
           onScroll={handleScroll}
           onLoad={checkScrollNeeded}
-          className="flex gap-4 overflow-x-auto netflix-scroll px-4 md:px-12 pb-6 pt-2"
-          style={{
-            scrollbarWidth: "none",
-            msOverflowStyle: "none",
-            WebkitScrollbar: { display: "none" },
-          }}
+          className="flex gap-3 sm:gap-4 md:gap-4 overflow-x-auto netflix-scroll px-2 sm:px-4 md:px-12 pb-6 pt-2"
         >
           {books.map((book) => (
             <NetflixBookCard

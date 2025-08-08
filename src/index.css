@@ -82,6 +82,47 @@ html {
   background: linear-gradient(to right, #ef4444, #dc2626);
 }
 
+/* Mobile touch scrolling improvements */
+.netflix-scroll {
+  -webkit-overflow-scrolling: touch;
+  scroll-behavior: smooth;
+  scroll-snap-type: x proximity;
+  overscroll-behavior-x: contain;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.netflix-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+/* Enhanced mobile scrolling */
+@media (max-width: 768px) {
+  .netflix-scroll {
+    scroll-snap-type: none;
+    -webkit-overflow-scrolling: touch;
+    scroll-behavior: auto;
+  }
+  
+  .netflix-scroll::-webkit-scrollbar {
+    height: 0px;
+    display: none;
+  }
+}
+
+/* Disable hover effects on touch devices for better performance */
+@media (hover: none) and (pointer: coarse) {
+  .group:hover .group-hover\:scale-105,
+  .group:hover .group-hover\:scale-110 {
+    transform: none !important;
+  }
+  
+  .hover\:scale-105:hover,
+  .hover\:scale-110:hover {
+    transform: none !important;
+  }
+}
+
 /* Loading animation */
 @keyframes fadeIn {
   from {
