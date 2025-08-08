@@ -13,7 +13,6 @@ const BookCard = ({ book, onDownload, size = "normal" }) => {
         style={{
           transformOrigin: "center center",
         }}
-        }}
       >
         {/* Book Cover */}
         <img
