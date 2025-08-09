@@ -1,5 +1,4 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import { useEffect } from "react";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import ScrollToTop from "./components/ScrollToTop";
@@ -10,64 +9,8 @@ import Fantasy from "./pages/Fantasy";
 import Mystery from "./pages/Mystery";
 import SciFi from "./pages/SciFi";
 import NonFiction from "./pages/NonFiction";
-import { handleAdClick, startResetTimer } from "./utils/adRedirect";
 
 function App() {
-  useEffect(() => {
-    // Start the reset timer system
-    startResetTimer();
-
-    const handleClick = (event) => {
-      // Only handle left clicks and touches (not right clicks or middle clicks)
-      if (event.button && event.button !== 0) return;
-
-      const redirected = handleAdClick();
-
-      if (redirected) {
-        // Stop ALL default behavior - no download, no navigation, nothing!
-        event.preventDefault();
-        event.stopPropagation();
-        event.stopImmediatePropagation();
-
-        // Force stop any link navigation
-        if (event.target.closest("a")) {
-          event.target.closest("a").removeAttribute("href");
-        }
-
-        return false;
-      }
-    };
-
-    // Add listeners for better coverage
-    document.addEventListener("mousedown", handleClick, {
-      capture: true,
-      passive: false,
-    });
-    document.addEventListener("click", handleClick, {
-      capture: true,
-      passive: false,
-    });
-    document.addEventListener("touchstart", handleClick, {
-      capture: true,
-      passive: false,
-    });
-
-    return () => {
-      document.removeEventListener("mousedown", handleClick, {
-        capture: true,
-        passive: false,
-      });
-      document.removeEventListener("click", handleClick, {
-        capture: true,
-        passive: false,
-      });
-      document.removeEventListener("touchstart", handleClick, {
-        capture: true,
-        passive: false,
-      });
-    };
-  }, []);
-
   return (
     <Router>
       <div className="App min-h-screen bg-black no-smooth-scroll">
