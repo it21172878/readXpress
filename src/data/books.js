@@ -26,886 +26,457 @@ export const createBook = (bookData) => {
 export const booksData = {
   featured: [
     createBook({
-      title: "The Midnight Library",
-      author: "Matt Haig",
-      category: "Fiction",
+      title: "Froggy Picks a Pumpkin",
+      author: "Jonathan London",
+      category: "Kids",
       description:
-        "Between life and death there is a library, and within that library, the shelves go on forever. Every book provides a chance to try another life you could have lived.",
+        "Froggy Picks a Pumpkin written by Jonathan London which was published in August 27, 2019",
       coverImage:
-        "https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=400&h=600&fit=crop&crop=top",
-      rating: 5,
-      reviews: 1234,
-      megaUrl: "https://mega.nz/file/example1#key1",
-    }),
-    createBook({
-      title: "Project Hail Mary",
-      author: "Andy Weir",
-      category: "Sci-Fi",
-      description:
-        "A lone astronaut must save the earth when he wakes up to find his crewmates dead and his memories completely gone.",
-      coverImage:
-        "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=600&fit=crop&crop=top",
-      rating: 5,
-      reviews: 987,
-      megaUrl: "https://mega.nz/file/example2#key2",
-    }),
-    createBook({
-      title: "The Seven Husbands of Evelyn Hugo",
-      author: "Taylor Jenkins Reid",
-      category: "Romance",
-      description:
-        "Aging and reclusive Hollywood movie icon Evelyn Hugo is finally ready to tell the truth about her glamorous and scandalous life.",
-      coverImage:
-        "https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=400&h=600&fit=crop&crop=top",
-      rating: 4,
-      reviews: 2156,
-      megaUrl: "https://mega.nz/file/example3#key3",
-    }),
-    createBook({
-      title: "Where the Crawdads Sing",
-      author: "Delia Owens",
-      category: "Fiction",
-      description:
-        "For years, rumors of the 'Marsh Girl' have haunted Barkley Cove, a quiet town on the North Carolina coast.",
-      coverImage:
-        "https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=400&h=600&fit=crop&crop=top",
+        "https://media.oceanofpdf.com/2025/07/PDF-EPUB-Froggy-Picks-a-Pumpkin-by-Jonathan-London-Download.jpg",
       rating: 5,
       reviews: 2890,
-      megaUrl: "https://mega.nz/file/example4#key4",
+      megaUrl: "https://transfer.it/t/3wWMbRth1bAC",
     }),
     createBook({
-      title: "The Song of Achilles",
-      author: "Madeline Miller",
-      category: "Fiction",
+      title: "Happy Hippo, Angry Duck",
+      author: "Sandra Boynton",
+      category: "Kids",
       description:
-        "A tale of gods, kings, immortal fame and the human heart, The Song of Achilles is a dazzling literary feat.",
+        "Happy Hippo, Angry Duck written by Sandra Boynton which was published in May 24, 2011",
       coverImage:
-        "https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=400&h=600&fit=crop&crop=top",
+        "https://media.oceanofpdf.com/2025/07/PDF-EPUB-Happy-Hippo-Angry-Duck-by-Sandra-Boynton-Download.jpg",
       rating: 4,
-      reviews: 2156,
-      megaUrl: "https://mega.nz/file/example5#key5",
+      reviews: 1987,
+      megaUrl: "https://transfer.it/t/1H3PGIlzBRiQ",
     }),
     createBook({
-      title: "Circe",
-      author: "Madeline Miller",
-      category: "Fantasy",
+      title: "Texas Roses (Devil’s Horn Ranch #3)",
+      author: "Samantha Christy",
+      category: "Romance",
       description:
-        "In the house of Helios, god of the sun and mightiest of the Titans, a daughter is born.",
+        "Texas Roses (Devil’s Horn Ranch #3) written by Samantha Christy which was published in April 30, 2022",
       coverImage:
-        "https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=400&h=600&fit=crop&crop=top",
+        "https://media.oceanofpdf.com/2025/08/PDF-EPUB-Texas-Roses-Devils-Horn-Ranch-3-by-Samantha-Christy-Download.jpg",
       rating: 4,
-      reviews: 2156,
-      megaUrl: "https://mega.nz/file/example6#key6",
+      reviews: 2789,
+      megaUrl: "https://transfer.it/t/XPlATB81VDjA",
     }),
     createBook({
-      title: "The Invisible Life of Addie LaRue",
-      author: "V.E. Schwab",
-      category: "Fantasy",
+      title: "Make Me Yours (Chicago Railers Hockey #1)",
+      author: "Jennifer Sucevic",
+      category: "Romance",
       description:
-        "A life no one will remember. A story you will never forget.",
+        "Make Me Yours (Chicago Railers Hockey #1) written by Jennifer Sucevic which was published in August 1, 2025",
       coverImage:
-        "https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=400&h=600&fit=crop&crop=top",
+        "https://media.oceanofpdf.com/2025/08/PDF-EPUB-Make-Me-Yours-Chicago-Railers-Hockey-1-by-Jennifer-Sucevic-Download.jpg",
       rating: 4,
-      reviews: 2156,
-      megaUrl: "https://mega.nz/file/example7#key7",
+      reviews: 2345,
+      megaUrl: "https://transfer.it/t/IwGMLE8hgbwa",
     }),
     createBook({
-      title: "The House in the Cerulean Sea",
-      author: "TJ Klune",
-      category: "Fantasy",
-      description: "A magical island. A dangerous task. A burning secret.",
-      coverImage:
-        "https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=400&h=600&fit=crop&crop=top",
-      rating: 4,
-      reviews: 2156,
-      megaUrl: "https://mega.nz/file/example8#key8",
-    }),
-    createBook({
-      title: "Mexican Gothic",
-      author: "Silvia Moreno-Garcia",
-      category: "Horror",
+      title: "Navrh (Off-Campus, #1)",
+      author: "Elle Kennedy",
+      category: "Romance",
       description:
-        "After receiving a frantic letter from her newly-wed cousin begging for someone to save her from a mysterious doom.",
+        "Navrh (Off-Campus, #1) by Elle Kennedy book you can download now.",
       coverImage:
-        "https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=400&h=600&fit=crop&crop=top",
-      rating: 4,
-      reviews: 2156,
-      megaUrl: "https://mega.nz/file/example9#key9",
+        "https://media.oceanofpdf.com/2025/08/PDF-EPUB-Navrh-Off-Campus-1-by-Elle-Kennedy-Download.jpg",
+      rating: 5,
+      reviews: 3789,
+      megaUrl: "https://transfer.it/t/bHgHWI0hBTwJ",
     }),
     createBook({
-      title: "Klara and the Sun",
-      author: "Kazuo Ishiguro",
-      category: "Sci-Fi",
+      title: "Let Me Say It Again (The Morelli Sisters, #5)",
+      author: "Dani Ryan",
+      category: "Romance",
       description:
-        "Klara and the Sun is a thrilling book that offers a look at our changing world through the eyes of an unforgettable narrator.",
+        "Let Me Say It Again (The Morelli Sisters, #5) written by Dani Ryan which was published in July 15, 2025",
       coverImage:
-        "https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=400&h=600&fit=crop&crop=top",
+        "https://media.oceanofpdf.com/2025/08/PDF-EPUB-Let-Me-Say-It-Again-The-Morelli-Sisters-5-by-Dani-Ryan-Download.png",
       rating: 4,
-      reviews: 2156,
-      megaUrl: "https://mega.nz/file/example10#key10",
+      reviews: 2987,
+      megaUrl: "https://transfer.it/t/OP3t6RkzmT5Q",
     }),
     createBook({
-      title: "The Sanatorium",
-      author: "Sarah Pearse",
-      category: "Mystery",
+      title: "Devil’s Claim (Devil’s Syndicate #2)",
+      author: "Piper Stone",
+      category: "Romance",
       description:
-        "An imposing, isolated hotel, high up in the Swiss Alps, is the last place Elin Warner wants to be.",
+        "Devil’s Claim (Devil’s Syndicate #2) written by Piper Stone which was published in July 4, 2025",
       coverImage:
-        "https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=400&h=600&fit=crop&crop=top",
-      rating: 4,
-      reviews: 2156,
-      megaUrl: "https://mega.nz/file/example11#key11",
-    }),
-    createBook({
-      title: "The Thursday Murder Club",
-      author: "Richard Osman",
-      category: "Mystery",
-      description:
-        "In a peaceful retirement village, four unlikely friends meet weekly in the Jigsaw Room to discuss unsolved crimes.",
-      coverImage:
-        "https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=400&h=600&fit=crop&crop=top",
-      rating: 4,
-      reviews: 2156,
-      megaUrl: "https://mega.nz/file/example12#key12",
+        "https://media.oceanofpdf.com/2025/08/PDF-EPUB-Devils-Claim-Devils-Syndicate-2-by-Piper-Stone-Download.jpg",
+      rating: 5,
+      reviews: 4123,
+      megaUrl: "https://transfer.it/t/W91WzA8jzbZb",
     }),
   ],
 
   kids: [
     createBook({
-      title: "Wonder",
-      author: "R.J. Palacio",
+      title: "Froggy Picks a Pumpkin",
+      author: "Jonathan London",
       category: "Kids",
       description:
-        "August Pullman was born with a facial difference that, up until now, has prevented him from going to a mainstream school.",
+        "Froggy Picks a Pumpkin written by Jonathan London which was published in August 27, 2019",
       coverImage:
-        "https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=400&h=600&fit=crop&crop=top",
+        "https://media.oceanofpdf.com/2025/07/PDF-EPUB-Froggy-Picks-a-Pumpkin-by-Jonathan-London-Download.jpg",
       rating: 5,
       reviews: 2890,
-      megaUrl: "https://mega.nz/file/kidsexample1#key1",
+      megaUrl: "https://transfer.it/t/3wWMbRth1bAC",
     }),
     createBook({
-      title: "The Cat in the Hat",
-      author: "Dr. Seuss",
+      title: "Happy Hippo, Angry Duck",
+      author: "Sandra Boynton",
       category: "Kids",
       description:
-        "A tall cat in a red and white hat visits two children on a rainy day when their mother is away.",
+        "Happy Hippo, Angry Duck written by Sandra Boynton which was published in May 24, 2011",
       coverImage:
-        "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=600&fit=crop&crop=top",
+        "https://media.oceanofpdf.com/2025/07/PDF-EPUB-Happy-Hippo-Angry-Duck-by-Sandra-Boynton-Download.jpg",
       rating: 4,
       reviews: 1987,
-      megaUrl: "https://mega.nz/file/kidsexample2#key2",
+      megaUrl: "https://transfer.it/t/1H3PGIlzBRiQ",
     }),
     createBook({
-      title: "Charlotte's Web",
-      author: "E.B. White",
+      title: "The Path of the She Wolf",
+      author: "Theresa Tomlinson",
       category: "Kids",
       description:
-        "The story of a little girl named Fern who loved a little pig named Wilbur and of Wilbur's dear friend Charlotte A. Cavatica.",
+        "The Path of the She Wolf (Forestwife Saga, #3) written by Theresa Tomlinson which was published in June 1, 2000",
       coverImage:
-        "https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=400&h=600&fit=crop&crop=top",
+        "https://media.oceanofpdf.com/2025/06/PDF-EPUB-The-Path-of-the-She-Wolf-Forestwife-Saga-3-by-Theresa-Tomlinson-Download.jpg",
       rating: 5,
       reviews: 3456,
-      megaUrl: "https://mega.nz/file/kidsexample3#key3",
+      megaUrl: "https://transfer.it/t/5kXbLYlhxJAZ",
     }),
     createBook({
-      title: "Matilda",
-      author: "Roald Dahl",
+      title: "The Singing Mermaid",
+      author: "Julia Donaldson",
       category: "Kids",
       description:
-        "An extraordinary girl with a vivid imagination who dares to take a stand and change her destiny.",
+        "The Singing Mermaid written by Julia Donaldson which was published in April 1, 2012",
       coverImage:
-        "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=600&fit=crop&crop=top",
+        "https://media.oceanofpdf.com/2025/05/PDF-EPUB-The-Singing-Mermaid-by-Julia-Donaldson-Download.jpg",
       rating: 5,
       reviews: 2765,
-      megaUrl: "https://mega.nz/file/kidsexample4#key4",
+      megaUrl: "https://transfer.it/t/MraSCQlxGDiD",
     }),
     createBook({
-      title: "The BFG",
-      author: "Roald Dahl",
+      title: "Alice-Miranda Takes the Lead",
+      author: "Jacqueline Harvey",
       category: "Kids",
       description:
-        "Sophie meets the Big Friendly Giant who, unlike his neighbors, refuses to eat children.",
+        "Alice-Miranda Takes the Lead written by Jacqueline Harvey which was published in February 1, 2011",
       coverImage:
-        "https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=400&h=600&fit=crop&crop=top",
+        "https://media.oceanofpdf.com/2025/05/PDF-EPUB-Alice-Miranda-Takes-the-Lead-by-Jacqueline-Harvey-Download.jpg",
       rating: 4,
       reviews: 2123,
-      megaUrl: "https://mega.nz/file/kidsexample5#key5",
+      megaUrl: "https://transfer.it/t/3woi7Z031D5L",
     }),
     createBook({
-      title: "Where the Wild Things Are",
-      author: "Maurice Sendak",
+      title: "Rabbit Rabbit",
+      author: "Dori Hillestad Butler",
       category: "Kids",
       description:
-        "Max's journey to the land of the Wild Things, where he becomes their king.",
+        "Rabbit Rabbit written by Dori Hillestad Butler which was published in April 15, 2025",
       coverImage:
-        "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=600&fit=crop&crop=top",
+        "https://media.oceanofpdf.com/2025/05/PDF-EPUB-Rabbit-Rabbit-by-Dori-Hillestad-Butler-Download.jpg",
       rating: 4,
       reviews: 1876,
-      megaUrl: "https://mega.nz/file/kidsexample6#key6",
+      megaUrl: "https://transfer.it/t/Xcx2qVtXxDIa",
     }),
     createBook({
-      title: "The Giving Tree",
-      author: "Shel Silverstein",
+      title: "Alice-Miranda at Sea",
+      author: "Jacqueline Harvey",
       category: "Kids",
       description:
-        "A heartwarming story about the relationship between a boy and a tree.",
+        "Alice-Miranda at Sea written by Jacqueline Harvey which was published in August 1, 2011",
       coverImage:
-        "https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=400&h=600&fit=crop&crop=top",
+        "https://media.oceanofpdf.com/2025/05/PDF-EPUB-Alice-Miranda-at-Sea-by-Jacqueline-Harvey-Download.jpg",
       rating: 5,
       reviews: 2987,
-      megaUrl: "https://mega.nz/file/kidsexample7#key7",
-    }),
-    createBook({
-      title: "Green Eggs and Ham",
-      author: "Dr. Seuss",
-      category: "Kids",
-      description:
-        "Sam-I-Am tries to convince another character to try green eggs and ham.",
-      coverImage:
-        "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=600&fit=crop&crop=top",
-      rating: 4,
-      reviews: 2234,
-      megaUrl: "https://mega.nz/file/kidsexample8#key8",
-    }),
-    createBook({
-      title: "The Very Hungry Caterpillar",
-      author: "Eric Carle",
-      category: "Kids",
-      description:
-        "A caterpillar eats his way through a week of food before transforming into a butterfly.",
-      coverImage:
-        "https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=400&h=600&fit=crop&crop=top",
-      rating: 5,
-      reviews: 3123,
-      megaUrl: "https://mega.nz/file/kidsexample9#key9",
-    }),
-    createBook({
-      title: "Goodnight Moon",
-      author: "Margaret Wise Brown",
-      category: "Kids",
-      description: "A little bunny says goodnight to everything around him.",
-      coverImage:
-        "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=600&fit=crop&crop=top",
-      rating: 4,
-      reviews: 1654,
-      megaUrl: "https://mega.nz/file/kidsexample10#key10",
-    }),
-    createBook({
-      title: "If You Give a Mouse a Cookie",
-      author: "Laura Numeroff",
-      category: "Kids",
-      description:
-        "A circular tale about a mouse who asks for a cookie and then needs many other things.",
-      coverImage:
-        "https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=400&h=600&fit=crop&crop=top",
-      rating: 4,
-      reviews: 1987,
-      megaUrl: "https://mega.nz/file/kidsexample11#key11",
-    }),
-    createBook({
-      title: "The Polar Express",
-      author: "Chris Van Allsburg",
-      category: "Kids",
-      description: "A magical train ride to the North Pole on Christmas Eve.",
-      coverImage:
-        "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=600&fit=crop&crop=top",
-      rating: 5,
-      reviews: 2456,
-      megaUrl: "https://mega.nz/file/kidsexample12#key12",
+      megaUrl: "https://transfer.it/t/2x4D2JtRXJSA",
     }),
   ],
 
   romance: [
     createBook({
-      title: "Pride and Prejudice",
-      author: "Jane Austen",
+      title: "Too Good to Be True",
+      author: "Sheila O’Flanagan",
       category: "Romance",
       description:
-        "The classic tale of Elizabeth Bennet and Mr. Darcy's complicated relationship in 19th century England.",
+        "Too Good to Be True written by Sheila O’Flanagan which was published in October 13, 2003",
       coverImage:
-        "https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=400&h=600&fit=crop&crop=top",
+        "https://media.oceanofpdf.com/2025/08/PDF-EPUB-Too-Good-to-Be-True-by-Sheila-OFlanagan-Download.jpg",
       rating: 5,
       reviews: 4567,
-      megaUrl: "https://mega.nz/file/romanceexample1#key1",
+      megaUrl: "https://transfer.it/t/QTJB6d0DxbgQ",
     }),
     createBook({
-      title: "It Ends with Us",
-      author: "Colleen Hoover",
+      title: "Spark",
+      author: "Lauren Rowe",
       category: "Romance",
       description:
-        "A powerful story about love, resilience, and the courage it takes to go against the grain.",
+        "Spark written by Lauren Rowe which was published in July 16, 2025",
       coverImage:
-        "https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=400&h=600&fit=crop&crop=top",
+        "https://media.oceanofpdf.com/2025/08/PDF-EPUB-Spark-by-Lauren-Rowe-Download.jpg",
       rating: 4,
       reviews: 3456,
-      megaUrl: "https://mega.nz/file/romanceexample2#key2",
+      megaUrl: "https://transfer.it/t/au2jCB9zhBZT",
     }),
     createBook({
-      title: "The Hating Game",
-      author: "Sally Thorne",
+      title: "Texas Roses (Devil’s Horn Ranch #3)",
+      author: "Samantha Christy",
       category: "Romance",
       description:
-        "Lucy and Joshua hate each other. Or do they? A funny, sexy, enemies-to-lovers contemporary romance.",
+        "Texas Roses (Devil’s Horn Ranch #3) written by Samantha Christy which was published in April 30, 2022",
       coverImage:
-        "https://images.unsplash.com/photo-1512820790803-83ca734da794?w=400&h=600&fit=crop&crop=top",
+        "https://media.oceanofpdf.com/2025/08/PDF-EPUB-Texas-Roses-Devils-Horn-Ranch-3-by-Samantha-Christy-Download.jpg",
       rating: 4,
       reviews: 2789,
-      megaUrl: "https://mega.nz/file/romanceexample3#key3",
+      megaUrl: "https://transfer.it/t/XPlATB81VDjA",
     }),
     createBook({
-      title: "The Kiss Quotient",
-      author: "Helen Hoang",
+      title: "Make Me Yours (Chicago Railers Hockey #1)",
+      author: "Jennifer Sucevic",
       category: "Romance",
       description:
-        "A woman with Asperger's hires a male escort to help her learn about intimacy and relationships.",
+        "Make Me Yours (Chicago Railers Hockey #1) written by Jennifer Sucevic which was published in August 1, 2025",
       coverImage:
-        "https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=400&h=600&fit=crop&crop=top",
+        "https://media.oceanofpdf.com/2025/08/PDF-EPUB-Make-Me-Yours-Chicago-Railers-Hockey-1-by-Jennifer-Sucevic-Download.jpg",
       rating: 4,
       reviews: 2345,
-      megaUrl: "https://mega.nz/file/romanceexample4#key4",
+      megaUrl: "https://transfer.it/t/IwGMLE8hgbwa",
     }),
     createBook({
-      title: "Beach Read",
-      author: "Emily Henry",
+      title: "Navrh (Off-Campus, #1)",
+      author: "Elle Kennedy",
       category: "Romance",
       description:
-        "Two rival writers challenge each other to swap genres and write outside their comfort zones.",
+        "Navrh (Off-Campus, #1) by Elle Kennedy book you can download now.",
       coverImage:
-        "https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=400&h=600&fit=crop&crop=top",
+        "https://media.oceanofpdf.com/2025/08/PDF-EPUB-Navrh-Off-Campus-1-by-Elle-Kennedy-Download.jpg",
       rating: 5,
       reviews: 3789,
-      megaUrl: "https://mega.nz/file/romanceexample5#key5",
+      megaUrl: "https://transfer.it/t/bHgHWI0hBTwJ",
     }),
     createBook({
-      title: "The Spanish Love Deception",
-      author: "Elena Armas",
+      title: "Let Me Say It Again (The Morelli Sisters, #5)",
+      author: "Dani Ryan",
       category: "Romance",
       description:
-        "A woman asks her colleague to be her fake boyfriend for her sister's wedding in Spain.",
+        "Let Me Say It Again (The Morelli Sisters, #5) written by Dani Ryan which was published in July 15, 2025",
       coverImage:
-        "https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=400&h=600&fit=crop&crop=top",
+        "https://media.oceanofpdf.com/2025/08/PDF-EPUB-Let-Me-Say-It-Again-The-Morelli-Sisters-5-by-Dani-Ryan-Download.png",
       rating: 4,
       reviews: 2987,
-      megaUrl: "https://mega.nz/file/romanceexample6#key6",
+      megaUrl: "https://transfer.it/t/OP3t6RkzmT5Q",
     }),
     createBook({
-      title: "Red, White & Royal Blue",
-      author: "Casey McQuiston",
+      title: "Devil’s Claim (Devil’s Syndicate #2)",
+      author: "Piper Stone",
       category: "Romance",
       description:
-        "The son of the President falls in love with the Prince of Wales.",
+        "Devil’s Claim (Devil’s Syndicate #2) written by Piper Stone which was published in July 4, 2025",
       coverImage:
-        "https://images.unsplash.com/photo-1512820790803-83ca734da794?w=400&h=600&fit=crop&crop=top",
+        "https://media.oceanofpdf.com/2025/08/PDF-EPUB-Devils-Claim-Devils-Syndicate-2-by-Piper-Stone-Download.jpg",
       rating: 5,
       reviews: 4123,
-      megaUrl: "https://mega.nz/file/romanceexample7#key7",
+      megaUrl: "https://transfer.it/t/W91WzA8jzbZb",
     }),
     createBook({
-      title: "The Seven Moons of Maali Almeida",
-      author: "Shehan Karunatilaka",
+      title: "Selamat Tinggal",
+      author: "Tere Liye",
       category: "Romance",
       description:
-        "A photographer wakes up dead and has seven moons to solve his own murder.",
+        "Selamat Tinggal written by Tere Liye which was published in May 7, 2020",
       coverImage:
-        "https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=400&h=600&fit=crop&crop=top",
+        "https://media.oceanofpdf.com/2025/08/PDF-EPUB-Selamat-Tinggal-by-Tere-Liye-Download.jpg",
       rating: 4,
       reviews: 1876,
-      megaUrl: "https://mega.nz/file/romanceexample8#key8",
+      megaUrl: "https://transfer.it/t/GpcvDV0H0bSK",
     }),
     createBook({
-      title: "People We Meet on Vacation",
-      author: "Emily Henry",
+      title: "Dem Abgrund so nah (Danny-Trilogie, #2)",
+      author: "Jessica Koch",
       category: "Romance",
       description:
-        "Best friends take one last vacation together to save their friendship.",
+        "Dem Abgrund so nah (Danny-Trilogie, #2) written by Jessica Koch which was published in January 1, 2016",
       coverImage:
-        "https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=400&h=600&fit=crop&crop=top",
+        "https://media.oceanofpdf.com/2025/08/PDF-EPUB-Dem-Abgrund-so-nah-Danny-Trilogie-2-by-Jessica-Koch-Download.jpg",
       rating: 4,
       reviews: 3245,
-      megaUrl: "https://mega.nz/file/romanceexample9#key9",
-    }),
-    createBook({
-      title: "The Proposal",
-      author: "Jasmine Guillory",
-      category: "Romance",
-      description:
-        "A fake engagement leads to real feelings in this contemporary romance.",
-      coverImage:
-        "https://images.unsplash.com/photo-1512820790803-83ca734da794?w=400&h=600&fit=crop&crop=top",
-      rating: 4,
-      reviews: 2654,
-      megaUrl: "https://mega.nz/file/romanceexample10#key10",
-    }),
-    createBook({
-      title: "The Unhoneymooners",
-      author: "Christina Lauren",
-      category: "Romance",
-      description:
-        "Enemies are forced to share a honeymoon when everyone else gets food poisoning.",
-      coverImage:
-        "https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=400&h=600&fit=crop&crop=top",
-      rating: 4,
-      reviews: 2987,
-      megaUrl: "https://mega.nz/file/romanceexample11#key11",
-    }),
-    createBook({
-      title: "The Wedding Date",
-      author: "Jasmine Guillory",
-      category: "Romance",
-      description:
-        "A chance encounter in an elevator leads to a fake wedding date arrangement.",
-      coverImage:
-        "https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=400&h=600&fit=crop&crop=top",
-      rating: 4,
-      reviews: 2234,
-      megaUrl: "https://mega.nz/file/romanceexample12#key12",
+      megaUrl: "https://transfer.it/t/EI6wydsBADLa",
     }),
   ],
 
   fantasy: [
     createBook({
-      title: "The Name of the Wind",
-      author: "Patrick Rothfuss",
+      title: "De Eerste Koning van Shannara (Inleiding op Shannara, #1)",
+      author: "Terry Brooks",
       category: "Fantasy",
       description:
-        "The riveting first-person narrative of a young man who grows to be the most notorious magician his world has ever seen.",
+        "De Eerste Koning van Shannara (Inleiding op Shannara, #1) written by Terry Brooks which was published in March 21, 1996",
       coverImage:
-        "https://images.unsplash.com/photo-1518373714866-3f1478910cc0?w=400&h=600&fit=crop&crop=top",
+        "https://media.oceanofpdf.com/2025/08/PDF-EPUB-De-Eerste-Koning-van-Shannara-Inleiding-op-Shannara-1-by-Terry-Brooks-Download.jpg",
       rating: 5,
       reviews: 3876,
-      megaUrl: "https://mega.nz/file/fantasyexample1#key1",
+      megaUrl: "https://transfer.it/t/UtJurdkRlT5K",
     }),
     createBook({
-      title: "The Hobbit",
-      author: "J.R.R. Tolkien",
+      title: "Of Gods and Pain (The Curse of Gods #2)",
+      author: "Dakota Monroe",
       category: "Fantasy",
       description:
-        "Bilbo Baggins enjoys a comfortable life until he is swept away on an epic adventure.",
+        "Of Gods and Pain (The Curse of Gods #2) written by Dakota Monroe which was published in February 29, 2024",
       coverImage:
-        "https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?w=400&h=600&fit=crop&crop=top",
+        "https://media.oceanofpdf.com/2025/08/PDF-EPUB-Of-Gods-and-Pain-The-Curse-of-Gods-2-by-Dakota-Monroe-Download.jpg",
       rating: 5,
       reviews: 5234,
-      megaUrl: "https://mega.nz/file/fantasyexample2#key2",
+      megaUrl: "https://transfer.it/t/yZ01jZs3mTbJ",
     }),
     createBook({
-      title: "A Game of Thrones",
-      author: "George R.R. Martin",
+      title: "Phoenix Fated",
+      author: "Ashe Moon",
       category: "Fantasy",
       description:
-        "In the kingdom of Westeros, nobles and commoners, soldiers and sorcerers struggle amidst political upheaval.",
+        "Phoenix Fated (The Phoenix Guardians #4) written by Ashe Moon which was published in June 30, 2025",
       coverImage:
-        "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=600&fit=crop&crop=top",
+        "https://media.oceanofpdf.com/2025/08/PDF-EPUB-Phoenix-Fated-The-Phoenix-Guardians-4-by-Ashe-Moon-Download.jpg",
       rating: 5,
       reviews: 4321,
-      megaUrl: "https://mega.nz/file/fantasyexample3#key3",
+      megaUrl: "https://transfer.it/t/Pm4GPV9zwLJD",
     }),
     createBook({
-      title: "The Fellowship of the Ring",
-      author: "J.R.R. Tolkien",
+      title: "Awakened Destiny",
+      author: "Rowan Shane",
       category: "Fantasy",
       description:
-        "A hobbit must destroy a powerful ring to save Middle-earth from the Dark Lord.",
+        "Awakened Destiny (The Dark Ascendant Series #3) written by Rowan Shane which was published in March 1, 2025",
       coverImage:
-        "https://images.unsplash.com/photo-1518373714866-3f1478910cc0?w=400&h=600&fit=crop&crop=top",
+        "https://media.oceanofpdf.com/2025/08/PDF-EPUB-Awakened-Destiny-The-Dark-Ascendant-Series-3-by-Rowan-Shane-Download.png",
       rating: 5,
       reviews: 6789,
-      megaUrl: "https://mega.nz/file/fantasyexample4#key4",
+      megaUrl: "https://transfer.it/t/tKkUmB9XRB6R",
     }),
     createBook({
-      title: "The Way of Kings",
-      author: "Brandon Sanderson",
+      title: "Hybrid Academy: Year One",
+      author: "L.C. Mortimer",
       category: "Fantasy",
       description:
-        "Epic fantasy following knights radiating mystical powers on a storm-ravaged world.",
+        "Hybrid Academy: Year One written by L.C. Mortimer which was published in July 31, 2019",
       coverImage:
-        "https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?w=400&h=600&fit=crop&crop=top",
+        "https://media.oceanofpdf.com/2025/08/PDF-EPUB-Hybrid-Academy-Year-One-by-L.C.-Mortimer-Download.jpg",
       rating: 5,
       reviews: 4567,
-      megaUrl: "https://mega.nz/file/fantasyexample5#key5",
-    }),
-    createBook({
-      title: "The Wheel of Time",
-      author: "Robert Jordan",
-      category: "Fantasy",
-      description:
-        "A young man discovers he may be the prophesied Dragon Reborn who will save or destroy the world.",
-      coverImage:
-        "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=600&fit=crop&crop=top",
-      rating: 4,
-      reviews: 3456,
-      megaUrl: "https://mega.nz/file/fantasyexample6#key6",
-    }),
-    createBook({
-      title: "The Magician's Nephew",
-      author: "C.S. Lewis",
-      category: "Fantasy",
-      description:
-        "The creation of Narnia and the adventures that led to The Lion, the Witch and the Wardrobe.",
-      coverImage:
-        "https://images.unsplash.com/photo-1518373714866-3f1478910cc0?w=400&h=600&fit=crop&crop=top",
-      rating: 4,
-      reviews: 2987,
-      megaUrl: "https://mega.nz/file/fantasyexample7#key7",
-    }),
-    createBook({
-      title: "The Dark Tower",
-      author: "Stephen King",
-      category: "Fantasy",
-      description:
-        "A gunslinger pursues the Dark Tower through a post-apocalyptic landscape.",
-      coverImage:
-        "https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?w=400&h=600&fit=crop&crop=top",
-      rating: 4,
-      reviews: 3789,
-      megaUrl: "https://mega.nz/file/fantasyexample8#key8",
-    }),
-    createBook({
-      title: "Mistborn",
-      author: "Brandon Sanderson",
-      category: "Fantasy",
-      description:
-        "A street thief discovers she has magical powers and joins a crew planning to overthrow an immortal emperor.",
-      coverImage:
-        "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=600&fit=crop&crop=top",
-      rating: 5,
-      reviews: 4234,
-      megaUrl: "https://mega.nz/file/fantasyexample9#key9",
-    }),
-    createBook({
-      title: "The Sword of Truth",
-      author: "Terry Goodkind",
-      category: "Fantasy",
-      description:
-        "A young man discovers he possesses a rare gift for magic and must use it to save his world.",
-      coverImage:
-        "https://images.unsplash.com/photo-1518373714866-3f1478910cc0?w=400&h=600&fit=crop&crop=top",
-      rating: 4,
-      reviews: 2876,
-      megaUrl: "https://mega.nz/file/fantasyexample10#key10",
-    }),
-    createBook({
-      title: "The First Law",
-      author: "Joe Abercrombie",
-      category: "Fantasy",
-      description:
-        "A gritty fantasy trilogy featuring morally complex characters in a brutal world.",
-      coverImage:
-        "https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?w=400&h=600&fit=crop&crop=top",
-      rating: 4,
-      reviews: 3123,
-      megaUrl: "https://mega.nz/file/fantasyexample11#key11",
-    }),
-    createBook({
-      title: "The Earthsea Cycle",
-      author: "Ursula K. Le Guin",
-      category: "Fantasy",
-      description:
-        "A young wizard's journey of self-discovery in a world of islands and magic.",
-      coverImage:
-        "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=600&fit=crop&crop=top",
-      rating: 5,
-      reviews: 2654,
-      megaUrl: "https://mega.nz/file/fantasyexample12#key12",
+      megaUrl: "https://transfer.it/t/fEwPrA8HCTYQ",
     }),
   ],
 
   mystery: [
     createBook({
-      title: "The Girl with the Dragon Tattoo",
-      author: "Stieg Larsson",
+      title: "Ready or Not",
+      author: "Tracy Darnton",
       category: "Mystery",
       description:
-        "A journalist and a young female hacker investigate a wealthy family's dark secrets.",
+        "Ready or Not written by Tracy Darnton which was published in May 12, 2022",
       coverImage:
-        "https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=400&h=600&fit=crop&crop=top",
+        "https://media.oceanofpdf.com/2025/08/PDF-EPUB-Ready-or-Not-by-Tracy-Darnton-Download.jpg",
       rating: 4,
       reviews: 3654,
-      megaUrl: "https://mega.nz/file/mysteryexample1#key1",
+      megaUrl: "https://transfer.it/t/z9o2GZ1hSBgK",
     }),
     createBook({
-      title: "Gone Girl",
-      author: "Gillian Flynn",
+      title: "The Good Liar",
+      author: "Denise Mina",
       category: "Mystery",
       description:
-        "A psychological thriller about a marriage gone wrong and a wife who disappears.",
+        "The Good Liar written by Denise Mina which was published in July 29, 2025",
       coverImage:
-        "https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=400&h=600&fit=crop&crop=top",
+        "https://media.oceanofpdf.com/2025/08/PDF-EPUB-The-Good-Liar-by-Denise-Mina-Download.jpg",
       rating: 4,
       reviews: 2987,
-      megaUrl: "https://mega.nz/file/mysteryexample2#key2",
+      megaUrl: "https://transfer.it/t/iM8JuYsTCRTS",
     }),
     createBook({
-      title: "The Silent Patient",
-      author: "Alex Michaelides",
+      title: "Dua Dini Hari",
+      author: "Chandra Bientang",
       category: "Mystery",
       description:
-        "A woman refuses to speak after allegedly murdering her husband, and a psychotherapist is determined to treat her.",
+        "Dua Dini Hari written by Chandra Bientang which was published in August 1, 2019",
       coverImage:
-        "https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=400&h=600&fit=crop&crop=top",
+        "https://media.oceanofpdf.com/2025/08/PDF-EPUB-Dua-Dini-Hari-by-Chandra-Bientang-Download.jpg",
       rating: 4,
       reviews: 4123,
-      megaUrl: "https://mega.nz/file/mysteryexample3#key3",
+      megaUrl: "https://transfer.it/t/fsCMnM1nzLaY",
     }),
     createBook({
-      title: "The Da Vinci Code",
-      author: "Dan Brown",
+      title: "Bonne nuit mon ange",
+      author: "Aimee Molloy",
       category: "Mystery",
       description:
-        "A symbologist gets involved in a murder mystery that leads to ancient secrets.",
+        "Bonne nuit mon ange written by Aimee Molloy which was published in October 13, 2020",
       coverImage:
-        "https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=400&h=600&fit=crop&crop=top",
+        "https://media.oceanofpdf.com/2025/08/PDF-EPUB-Bonne-nuit-mon-ange-by-Aimee-Molloy-Download.jpg",
       rating: 4,
       reviews: 5678,
-      megaUrl: "https://mega.nz/file/mysteryexample4#key4",
-    }),
-    createBook({
-      title: "In the Woods",
-      author: "Tana French",
-      category: "Mystery",
-      description:
-        "A detective investigates a child's murder that echoes a case from his own past.",
-      coverImage:
-        "https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=400&h=600&fit=crop&crop=top",
-      rating: 4,
-      reviews: 2345,
-      megaUrl: "https://mega.nz/file/mysteryexample5#key5",
-    }),
-    createBook({
-      title: "The Big Sleep",
-      author: "Raymond Chandler",
-      category: "Mystery",
-      description:
-        "Private detective Philip Marlowe investigates a complex case involving blackmail and murder.",
-      coverImage:
-        "https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=400&h=600&fit=crop&crop=top",
-      rating: 5,
-      reviews: 3456,
-      megaUrl: "https://mega.nz/file/mysteryexample6#key6",
-    }),
-    createBook({
-      title: "The Murder of Roger Ackroyd",
-      author: "Agatha Christie",
-      category: "Mystery",
-      description:
-        "Hercule Poirot investigates the murder of a wealthy man in an English village.",
-      coverImage:
-        "https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=400&h=600&fit=crop&crop=top",
-      rating: 5,
-      reviews: 4567,
-      megaUrl: "https://mega.nz/file/mysteryexample7#key7",
-    }),
-    createBook({
-      title: "The Maltese Falcon",
-      author: "Dashiell Hammett",
-      category: "Mystery",
-      description:
-        "A private detective gets caught up in a complex web of murder and deceit over a valuable bird statue.",
-      coverImage:
-        "https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=400&h=600&fit=crop&crop=top",
-      rating: 4,
-      reviews: 2987,
-      megaUrl: "https://mega.nz/file/mysteryexample8#key8",
-    }),
-    createBook({
-      title: "The Woman in White",
-      author: "Wilkie Collins",
-      category: "Mystery",
-      description:
-        "A drawing teacher encounters a mysterious woman in white on a moonlit road.",
-      coverImage:
-        "https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=400&h=600&fit=crop&crop=top",
-      rating: 4,
-      reviews: 1876,
-      megaUrl: "https://mega.nz/file/mysteryexample9#key9",
-    }),
-    createBook({
-      title: "And Then There Were None",
-      author: "Agatha Christie",
-      category: "Mystery",
-      description:
-        "Ten strangers are invited to an island where they are killed one by one.",
-      coverImage:
-        "https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=400&h=600&fit=crop&crop=top",
-      rating: 5,
-      reviews: 6789,
-      megaUrl: "https://mega.nz/file/mysteryexample10#key10",
-    }),
-    createBook({
-      title: "The Girl on the Train",
-      author: "Paula Hawkins",
-      category: "Mystery",
-      description:
-        "A troubled woman becomes entangled in a missing person case.",
-      coverImage:
-        "https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=400&h=600&fit=crop&crop=top",
-      rating: 4,
-      reviews: 3789,
-      megaUrl: "https://mega.nz/file/mysteryexample11#key11",
-    }),
-    createBook({
-      title: "The Cuckoo's Calling",
-      author: "Robert Galbraith",
-      category: "Mystery",
-      description:
-        "A private detective investigates the supposed suicide of a supermodel.",
-      coverImage:
-        "https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=400&h=600&fit=crop&crop=top",
-      rating: 4,
-      reviews: 2654,
-      megaUrl: "https://mega.nz/file/mysteryexample12#key12",
+      megaUrl: "https://transfer.it/t/cdSGbMkFQDBS",
     }),
   ],
 
   scifi: [
     createBook({
-      title: "Dune",
-      author: "Frank Herbert",
+      title: "Warhammer 40K: Crucible Of War Anthology",
+      author: "Christian Dunn",
       category: "Sci-Fi",
       description:
-        "Set in the distant future amidst a feudal interstellar society in which noble houses control planetary fiefs.",
+        "Warhammer 40K: Crucible Of War Anthology written by Christian Dunn which was published in 2003",
       coverImage:
-        "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=600&fit=crop&crop=top",
+        "https://media.oceanofpdf.com/2024/10/PDF-EPUB-Warhammer-40K-Crucible-Of-War-Anthology-by-Christian-Dunn-Download.jpg",
       rating: 5,
       reviews: 4567,
-      megaUrl: "https://mega.nz/file/scifiexample1#key1",
+      megaUrl: "https://transfer.it/t/utivbZ0HTbaD",
     }),
     createBook({
-      title: "The Martian",
-      author: "Andy Weir",
+      title: "The Martian Megapack",
+      author: "Wildside Press",
       category: "Sci-Fi",
       description:
-        "An astronaut becomes stranded on Mars and must find a way to survive until rescue arrives.",
+        "The Martian Megapack written by Wildside Press which was published in Mar 9, 2012",
       coverImage:
-        "https://images.unsplash.com/photo-1518373714866-3f1478910cc0?w=400&h=600&fit=crop&crop=top",
+        "https://media.oceanofpdf.com/2024/01/PDF-EPUB-The-Martian-Megapack-by-Wildside-Press-Download.jpg",
       rating: 5,
       reviews: 3789,
-      megaUrl: "https://mega.nz/file/scifiexample2#key2",
+      megaUrl: "https://transfer.it/t/gUSZrR1BFBxZ",
     }),
     createBook({
-      title: "Foundation",
-      author: "Isaac Asimov",
+      title: "Contested Dreams",
+      author: "Randall N Bills",
       category: "Sci-Fi",
       description:
-        "A mathematician develops a science to predict the future and preserve civilization.",
+        "Contested Dreams written by Randall N Bills which was published in November 29, 2019",
       coverImage:
-        "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=600&fit=crop&crop=top",
+        "https://media.oceanofpdf.com/2023/03/PDF-EPUB-Contested-Dreams-by-Randall-N-Bills-Download.jpg",
       rating: 5,
       reviews: 5234,
-      megaUrl: "https://mega.nz/file/scifiexample3#key3",
+      megaUrl: "https://transfer.it/t/qIuuKd01GJ6A",
     }),
     createBook({
-      title: "Neuromancer",
-      author: "William Gibson",
+      title: "Endless War",
+      author: "Randall N Bills",
       category: "Sci-Fi",
       description:
-        "A hacker is hired for one last job in cyberspace in this cyberpunk classic.",
+        "Endless War written by Randall N Bills which was published in November 26, 2019",
       coverImage:
-        "https://images.unsplash.com/photo-1518373714866-3f1478910cc0?w=400&h=600&fit=crop&crop=top",
+        "https://media.oceanofpdf.com/2023/03/PDF-EPUB-Endless-War-by-Randall-N-Bills-Download.jpg",
       rating: 4,
       reviews: 3456,
-      megaUrl: "https://mega.nz/file/scifiexample4#key4",
-    }),
-    createBook({
-      title: "The Hitchhiker's Guide to the Galaxy",
-      author: "Douglas Adams",
-      category: "Sci-Fi",
-      description:
-        "An ordinary human's adventures through space after Earth is demolished.",
-      coverImage:
-        "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=600&fit=crop&crop=top",
-      rating: 5,
-      reviews: 6789,
-      megaUrl: "https://mega.nz/file/scifiexample5#key5",
-    }),
-    createBook({
-      title: "Ender's Game",
-      author: "Orson Scott Card",
-      category: "Sci-Fi",
-      description:
-        "A young boy is trained in a military academy to fight an alien invasion.",
-      coverImage:
-        "https://images.unsplash.com/photo-1518373714866-3f1478910cc0?w=400&h=600&fit=crop&crop=top",
-      rating: 5,
-      reviews: 4321,
-      megaUrl: "https://mega.nz/file/scifiexample6#key6",
-    }),
-    createBook({
-      title: "1984",
-      author: "George Orwell",
-      category: "Sci-Fi",
-      description:
-        "A dystopian vision of a totalitarian society where Big Brother watches everything.",
-      coverImage:
-        "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=600&fit=crop&crop=top",
-      rating: 5,
-      reviews: 7890,
-      megaUrl: "https://mega.nz/file/scifiexample7#key7",
-    }),
-    createBook({
-      title: "Brave New World",
-      author: "Aldous Huxley",
-      category: "Sci-Fi",
-      description:
-        "A society where humans are engineered and conditioned for specific roles.",
-      coverImage:
-        "https://images.unsplash.com/photo-1518373714866-3f1478910cc0?w=400&h=600&fit=crop&crop=top",
-      rating: 4,
-      reviews: 3987,
-      megaUrl: "https://mega.nz/file/scifiexample8#key8",
-    }),
-    createBook({
-      title: "The Left Hand of Darkness",
-      author: "Ursula K. Le Guin",
-      category: "Sci-Fi",
-      description:
-        "An ambassador visits a planet where inhabitants can change gender.",
-      coverImage:
-        "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=600&fit=crop&crop=top",
-      rating: 4,
-      reviews: 2765,
-      megaUrl: "https://mega.nz/file/scifiexample9#key9",
-    }),
-    createBook({
-      title: "Fahrenheit 451",
-      author: "Ray Bradbury",
-      category: "Sci-Fi",
-      description:
-        "In a future where books are banned, a fireman begins to question his job.",
-      coverImage:
-        "https://images.unsplash.com/photo-1518373714866-3f1478910cc0?w=400&h=600&fit=crop&crop=top",
-      rating: 5,
-      reviews: 4567,
-      megaUrl: "https://mega.nz/file/scifiexample10#key10",
-    }),
-    createBook({
-      title: "The Time Machine",
-      author: "H.G. Wells",
-      category: "Sci-Fi",
-      description:
-        "A scientist travels to the distant future and discovers humanity's fate.",
-      coverImage:
-        "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=600&fit=crop&crop=top",
-      rating: 4,
-      reviews: 2345,
-      megaUrl: "https://mega.nz/file/scifiexample11#key11",
-    }),
-    createBook({
-      title: "Starship Troopers",
-      author: "Robert A. Heinlein",
-      category: "Sci-Fi",
-      description:
-        "A young soldier fights in an interstellar war against alien bugs.",
-      coverImage:
-        "https://images.unsplash.com/photo-1518373714866-3f1478910cc0?w=400&h=600&fit=crop&crop=top",
-      rating: 4,
-      reviews: 3234,
-      megaUrl: "https://mega.nz/file/scifiexample12#key12",
+      megaUrl: "https://transfer.it/t/dx64acsnlJAA",
     }),
   ],
 
   nonfiction: [
     createBook({
-      title: "Atomic Habits",
+      title: "Quantum Waveguide in Microcircuits, 2E",
       author: "James Clear",
       category: "Non-Fiction",
       description:

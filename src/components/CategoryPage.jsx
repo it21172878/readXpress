@@ -9,10 +9,17 @@ const CategoryPage = ({ category, title, emoji }) => {
   const books = getBooksByCategory(category);
 
   const handleDownload = (book) => {
-    alert(
-      `Downloading "${book.title}" by ${book.author}.\nRedirecting to Mega Drive...`
-    );
-    window.open(book.megaUrl, "_blank");
+    // Open directly to avoid popup blocker
+    const opened = window.open(book.megaUrl, "_blank");
+    
+    // Show feedback only if popup wasn't blocked
+    if (opened) {
+      // Optional: You can add a toast notification here
+      console.log(`Downloading "${book.title}" by ${book.author}`);
+    } else {
+      // Fallback if popup is blocked
+      alert(`Please allow popups to download "${book.title}"`);
+    }
   };
 
   const filteredAndSortedBooks = books

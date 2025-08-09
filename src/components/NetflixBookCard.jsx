@@ -7,7 +7,7 @@ const BookCard = ({ book, onDownload, size = "normal" }) => {
   };
 
   return (
-    <div className="group relative flex-shrink-0 cursor-pointer px-1 py-2">
+    <div className="group relative flex-shrink-0 px-1 py-2">
       <div
         className={`${cardSizes[size]} relative overflow-hidden rounded-md bg-gray-800 shadow-lg transition-transform duration-200 hover:scale-105 hover:z-20 hover:shadow-xl mx-auto`}
         style={{
@@ -60,7 +60,7 @@ const BookCard = ({ book, onDownload, size = "normal" }) => {
           <div className="flex gap-1 sm:gap-2">
             <button
               onClick={() => onDownload(book)}
-              className="bg-white text-black px-2 py-1 sm:px-3 sm:py-1 rounded-md text-xs font-semibold hover:bg-gray-200 transition-colors flex items-center gap-1"
+              className="bg-white text-black px-2 py-1 sm:px-3 sm:py-1 rounded-md text-xs font-semibold hover:bg-gray-200 transition-colors flex items-center gap-1 cursor-pointer"
             >
               <svg
                 className="w-2.5 h-2.5 sm:w-3 sm:h-3"

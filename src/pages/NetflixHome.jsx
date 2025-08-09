@@ -5,10 +5,17 @@ import { booksData } from "../data/books";
 
 const Home = () => {
   const handleDownload = (book) => {
-    alert(
-      `Downloading "${book.title}" by ${book.author}.\nRedirecting to Mega Drive...`
-    );
-    window.open(book.megaUrl, "_blank");
+    // Open directly to avoid popup blocker
+    const opened = window.open(book.megaUrl, "_blank");
+    
+    // Show feedback only if popup wasn't blocked
+    if (opened) {
+      // Optional: You can add a toast notification here
+      console.log(`Downloading "${book.title}" by ${book.author}`);
+    } else {
+      // Fallback if popup is blocked
+      alert(`Please allow popups to download "${book.title}"`);
+    }
   };
 
   return (
@@ -67,12 +74,12 @@ const Home = () => {
         />
 
         {/* Non-Fiction */}
-        <NetflixBookRow
+        {/* <NetflixBookRow
           title="Non-Fiction"
           books={booksData.nonfiction}
           onDownload={handleDownload}
           category="non-fiction"
-        />
+        /> */}
 
         {/* Browse by Genre Section - Enhanced */}
         <section className="py-12 sm:py-16 md:py-20 px-3 sm:px-4 md:px-12 max-w-screen-2xl mx-auto relative">
@@ -137,11 +144,14 @@ const Home = () => {
                 },
                 {
                   name: "Non-Fiction",
-                  path: "/category/non-fiction",
+                  path: "#",
+                  // path: "/category/non-fiction",
                   emoji: "📖",
                   gradient: "from-green-400 via-emerald-500 to-teal-600",
-                  description: "Real stories and knowledge",
-                  books: booksData.nonfiction?.length || 0,
+                  // description: "Real stories and knowledge",
+                  description: "Comming Soon...",
+                  // books: booksData.nonfiction?.length || 0,
+                  books: "uploading...",
                 },
               ].map((category, index) => (
                 <Link

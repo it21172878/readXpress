@@ -12,11 +12,11 @@ const Navbar = () => {
     { name: "Fantasy", path: "/category/fantasy", altPaths: ["/fantasy"] },
     { name: "Mystery", path: "/category/mystery", altPaths: ["/mystery"] },
     { name: "Sci-Fi", path: "/category/sci-fi", altPaths: ["/sci-fi"] },
-    {
-      name: "Non-Fiction",
-      path: "/category/non-fiction",
-      altPaths: ["/non-fiction"],
-    },
+    // {
+    //   name: "Non-Fiction",
+    //   path: "/category/non-fiction",
+    //   altPaths: ["/non-fiction"],
+    // },
   ];
 
   // Function to check if a nav item is active

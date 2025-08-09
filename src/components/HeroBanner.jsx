@@ -88,7 +88,7 @@ const HeroBanner = ({ books, onDownload }) => {
             <div className="flex flex-col sm:flex-row gap-2 sm:gap-3">
               <button
                 onClick={() => onDownload(currentBook)}
-                className="bg-white text-black px-4 sm:px-6 py-2 sm:py-2.5 rounded-md font-bold text-sm sm:text-base hover:bg-gray-200 transition-all duration-200 flex items-center justify-center gap-2 shadow-lg w-full sm:w-auto"
+                className="bg-white text-black px-4 sm:px-6 py-2 sm:py-2.5 rounded-md font-bold text-sm sm:text-base hover:bg-gray-200 transition-all duration-200 flex items-center justify-center gap-2 shadow-lg w-full sm:w-auto cursor-pointer"
               >
                 <svg
                   className="w-3 h-3 sm:w-4 sm:h-4"
@@ -104,7 +104,7 @@ const HeroBanner = ({ books, onDownload }) => {
                 Download Now
               </button>
 
-              <button className="bg-gray-600/70 backdrop-blur-sm text-white px-4 sm:px-6 py-2 sm:py-2.5 rounded-md font-bold text-sm sm:text-base hover:bg-gray-600 transition-all duration-200 flex items-center justify-center gap-2 w-full sm:w-auto">
+              {/* <button className="bg-gray-600/70 backdrop-blur-sm text-white px-4 sm:px-6 py-2 sm:py-2.5 rounded-md font-bold text-sm sm:text-base hover:bg-gray-600 transition-all duration-200 flex items-center justify-center gap-2 w-full sm:w-auto">
                 <svg
                   className="w-3 h-3 sm:w-4 sm:h-4"
                   fill="none"
@@ -119,7 +119,7 @@ const HeroBanner = ({ books, onDownload }) => {
                   />
                 </svg>
                 More Info
-              </button>
+              </button> */}
             </div>
           </div>
         </div>

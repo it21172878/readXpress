@@ -119,7 +119,7 @@ const BookRow = ({ title, books, onDownload, size = "normal", category }) => {
       {needsScrolling && showLeftArrow && (
         <button
           onClick={() => scroll("left")}
-          className="hidden md:block absolute left-2 top-1/2 transform -translate-y-1/2 z-30 bg-black/80 hover:bg-black/95 text-white p-3 rounded-full opacity-0 group-hover:opacity-100 transition-all duration-300 backdrop-blur-sm border border-gray-600 hover:border-white hover:scale-110"
+          className="hidden md:block absolute left-2 top-1/2 transform -translate-y-1/2 z-30 bg-black/80 hover:bg-black/95 text-white p-3 rounded-full opacity-0 group-hover:opacity-100 transition-all duration-300 backdrop-blur-sm border border-gray-600 hover:border-white hover:scale-110 cursor-pointer"
           style={{ zIndex: 35 }}
         >
           <svg
@@ -142,7 +142,7 @@ const BookRow = ({ title, books, onDownload, size = "normal", category }) => {
       {needsScrolling && showRightArrow && (
         <button
           onClick={() => scroll("right")}
-          className="hidden md:block absolute right-2 top-1/2 transform -translate-y-1/2 z-30 bg-black/80 hover:bg-black/95 text-white p-3 rounded-full opacity-0 group-hover:opacity-100 transition-all duration-300 backdrop-blur-sm border border-gray-600 hover:border-white hover:scale-110"
+          className="hidden md:block absolute right-2 top-1/2 transform -translate-y-1/2 z-30 bg-black/80 hover:bg-black/95 text-white p-3 rounded-full opacity-0 group-hover:opacity-100 transition-all duration-300 backdrop-blur-sm border border-gray-600 hover:border-white hover:scale-110 cursor-pointer"
           style={{ zIndex: 35 }}
         >
           <svg
