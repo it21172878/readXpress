@@ -104,16 +104,10 @@ const CategoryPage = ({ category, title, emoji }) => {
             <div className="space-y-8">
               {/* Books List - Compact unique rows */}
               <div className="space-y-2">
-                {filteredAndSortedBooks.map((book, index) => (
+                {filteredAndSortedBooks.map((book) => (
                   <div
                     key={book.id}
-                    className={`relative overflow-hidden rounded-xl border transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl group ${
-                      index % 3 === 0
-                        ? "bg-gradient-to-r from-red-900/20 via-gray-900/80 to-black border-red-800/30"
-                        : index % 3 === 1
-                        ? "bg-gradient-to-r from-purple-900/20 via-gray-900/80 to-black border-purple-800/30"
-                        : "bg-gradient-to-r from-blue-900/20 via-gray-900/80 to-black border-blue-800/30"
-                    }`}
+                    className="relative overflow-hidden rounded-xl border transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl group bg-gradient-to-r from-red-900/20 via-gray-900/80 to-black border-red-800/30"
                   >
                     {/* Background accent */}
                     <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
@@ -166,15 +160,7 @@ const CategoryPage = ({ category, title, emoji }) => {
                                   ({book.reviews})
                                 </span>
                               </div>
-                              <span
-                                className={`px-1.5 py-0.5 rounded-full text-xs font-medium ${
-                                  index % 3 === 0
-                                    ? "bg-red-600/80 text-red-100"
-                                    : index % 3 === 1
-                                    ? "bg-purple-600/80 text-purple-100"
-                                    : "bg-blue-600/80 text-blue-100"
-                                }`}
-                              >
+                              <span className="px-1.5 py-0.5 rounded-full text-xs font-medium bg-red-600/80 text-red-100">
                                 {book.category}
                               </span>
                             </div>
@@ -189,13 +175,7 @@ const CategoryPage = ({ category, title, emoji }) => {
                           <div className="flex-shrink-0">
                             <button
                               onClick={() => handleDownload(book)}
-                              className={`download-btn px-2 py-1 sm:px-3 sm:py-1.5 rounded-md font-medium text-xs transition-all duration-300 flex items-center gap-1 sm:gap-1.5 hover:scale-105 active:scale-95 cursor-pointer transform hover:shadow-lg active:shadow-sm ${
-                                index % 3 === 0
-                                  ? "bg-red-600 hover:bg-red-700 text-white"
-                                  : index % 3 === 1
-                                  ? "bg-purple-600 hover:bg-purple-700 text-white"
-                                  : "bg-blue-600 hover:bg-blue-700 text-white"
-                              }`}
+                              className="bg-red-600 hover:bg-red-700 text-white px-2 py-1 sm:px-3 sm:py-1.5 rounded-md font-medium text-xs transition-all duration-300 flex items-center gap-1 sm:gap-1.5 hover:scale-105 active:scale-95 cursor-pointer transform hover:shadow-lg active:shadow-sm"
                             >
                               <svg
                                 className="w-2.5 h-2.5 sm:w-3 sm:h-3 transition-transform duration-200"

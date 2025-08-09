@@ -88,7 +88,7 @@ const HeroBanner = ({ books, onDownload }) => {
             <div className="flex flex-col sm:flex-row gap-2 sm:gap-3">
               <button
                 onClick={() => onDownload(currentBook)}
-                className="download-btn bg-white text-black px-4 sm:px-6 py-2 sm:py-2.5 rounded-md font-bold text-sm sm:text-base hover:bg-gray-200 transition-all duration-300 flex items-center justify-center gap-2 shadow-lg w-full sm:w-auto cursor-pointer transform hover:scale-105 active:scale-95 hover:shadow-xl"
+                className="bg-red-600 hover:bg-red-700 text-white px-4 sm:px-6 py-2 sm:py-2.5 rounded-md font-bold text-sm sm:text-base transition-all duration-300 flex items-center justify-center gap-2 shadow-lg w-full sm:w-auto cursor-pointer transform hover:scale-105 active:scale-95 hover:shadow-xl active:shadow-inner"
               >
                 <svg
                   className="w-3 h-3 sm:w-4 sm:h-4 transition-transform duration-200"
