@@ -108,7 +108,7 @@ const BookRow = ({ title, books, onDownload, size = "normal", category }) => {
         {category && (
           <button
             onClick={() => navigate(`/category/${category}`)}
-            className="text-red-500 hover:text-red-400 text-xs sm:text-sm md:text-base font-medium transition-colors duration-200 hover:underline"
+            className="text-red-500 hover:text-red-400 text-xs sm:text-sm md:text-base font-medium transition-colors duration-200 hover:underline cursor-pointer"
           >
             See More →
           </button>

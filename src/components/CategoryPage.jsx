@@ -189,7 +189,7 @@ const CategoryPage = ({ category, title, emoji }) => {
                           <div className="flex-shrink-0">
                             <button
                               onClick={() => handleDownload(book)}
-                              className={`px-2 py-1 sm:px-3 sm:py-1.5 rounded-md font-medium text-xs transition-all duration-200 flex items-center gap-1 sm:gap-1.5 hover:scale-105 active:scale-95 cursor-pointer ${
+                              className={`download-btn px-2 py-1 sm:px-3 sm:py-1.5 rounded-md font-medium text-xs transition-all duration-300 flex items-center gap-1 sm:gap-1.5 hover:scale-105 active:scale-95 cursor-pointer transform hover:shadow-lg active:shadow-sm ${
                                 index % 3 === 0
                                   ? "bg-red-600 hover:bg-red-700 text-white"
                                   : index % 3 === 1
@@ -198,7 +198,7 @@ const CategoryPage = ({ category, title, emoji }) => {
                               }`}
                             >
                               <svg
-                                className="w-2.5 h-2.5 sm:w-3 sm:h-3"
+                                className="w-2.5 h-2.5 sm:w-3 sm:h-3 transition-transform duration-200"
                                 fill="none"
                                 stroke="currentColor"
                                 viewBox="0 0 24 24"
@@ -210,7 +210,7 @@ const CategoryPage = ({ category, title, emoji }) => {
                                   d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
                                 />
                               </svg>
-                              <span className="hidden sm:inline">Download</span>
+                              <span className="text-xs">Download</span>
                             </button>
                           </div>
                         </div>

@@ -60,10 +60,10 @@ const BookCard = ({ book, onDownload, size = "normal" }) => {
           <div className="flex gap-1 sm:gap-2">
             <button
               onClick={() => onDownload(book)}
-              className="bg-white text-black px-2 py-1 sm:px-3 sm:py-1 rounded-md text-xs font-semibold hover:bg-gray-200 transition-colors flex items-center gap-1 cursor-pointer"
+              className="download-btn bg-white text-black px-2 py-1 sm:px-3 sm:py-1.5 rounded-md text-xs font-semibold hover:bg-gray-200 transition-all duration-300 flex items-center gap-1 cursor-pointer transform hover:scale-105 active:scale-95 shadow-sm hover:shadow-lg"
             >
               <svg
-                className="w-2.5 h-2.5 sm:w-3 sm:h-3"
+                className="w-2.5 h-2.5 sm:w-3 sm:h-3 transition-transform duration-200"
                 fill="currentColor"
                 viewBox="0 0 20 20"
               >
@@ -73,7 +73,7 @@ const BookCard = ({ book, onDownload, size = "normal" }) => {
                   clipRule="evenodd"
                 />
               </svg>
-              <span className="hidden sm:inline">Download</span>
+              <span className="text-xs sm:text-xs">Download</span>
             </button>
             {/* <button className="bg-gray-600 text-white p-1 rounded-md hover:bg-gray-500 transition-colors">
               <svg
