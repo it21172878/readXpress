@@ -1,5 +1,16 @@
 @import "tailwindcss";
 
+/* Custom text selection color */
+::selection {
+  background-color: #dc2626; /* Red-600 to match theme */
+  color: white;
+}
+
+::-moz-selection {
+  background-color: #dc2626; /* Red-600 to match theme */
+  color: white;
+}
+
 /* Custom styles for readXpress */
 body {
   font-family: "Inter", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;

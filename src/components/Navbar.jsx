@@ -46,7 +46,7 @@ const Navbar = () => {
                 <Link
                   key={item.name}
                   to={item.path}
-                  className={`relative text-gray-300 hover:text-white transition-all duration-300 font-medium hover:scale-105 px-2 py-2 rounded-lg text-sm xl:text-base ${
+                  className={`relative text-gray-300 hover:text-white transition-all duration-300 font-medium hover:scale-105 px-2 py-2 rounded-lg text-sm xl:text-base cursor-pointer ${
                     isActive
                       ? "text-white bg-red-600/20 border border-red-600/30 scale-105 shadow-lg shadow-red-600/20"
                       : "hover:bg-gray-800/50"
@@ -103,7 +103,7 @@ const Navbar = () => {
                   <Link
                     key={item.name}
                     to={item.path}
-                    className={`flex items-center justify-between px-3 py-2.5 text-white hover:text-red-400 transition-all duration-200 rounded-lg text-sm ${
+                    className={`flex items-center justify-between px-3 py-2.5 text-white hover:text-red-400 transition-all duration-200 rounded-lg text-sm cursor-pointer ${
                       isActive
                         ? "text-red-400 bg-red-600/10 border border-red-600/20 font-semibold"
                         : "hover:bg-gray-800/50"

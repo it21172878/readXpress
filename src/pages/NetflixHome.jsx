@@ -7,7 +7,7 @@ const Home = () => {
   const handleDownload = (book) => {
     // Open directly to avoid popup blocker
     const opened = window.open(book.megaUrl, "_blank");
-    
+
     // Show feedback only if popup wasn't blocked
     if (opened) {
       // Optional: You can add a toast notification here

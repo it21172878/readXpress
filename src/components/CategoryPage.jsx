@@ -11,7 +11,7 @@ const CategoryPage = ({ category, title, emoji }) => {
   const handleDownload = (book) => {
     // Open directly to avoid popup blocker
     const opened = window.open(book.megaUrl, "_blank");
-    
+
     // Show feedback only if popup wasn't blocked
     if (opened) {
       // Optional: You can add a toast notification here
@@ -151,10 +151,23 @@ const CategoryPage = ({ category, title, emoji }) => {
                             {/* Rating and Category in one line */}
                             <div className="flex items-center gap-2 sm:gap-3 mb-1 flex-wrap">
                               <div className="flex items-center gap-1">
-                                <span className="text-yellow-500 text-xs">
-                                  ⭐
-                                </span>
-                                <span className="text-white font-semibold text-xs">
+                                {/* Five Star Rating */}
+                                <div className="flex items-center gap-0.5">
+                                  {[...Array(5)].map((_, starIndex) => (
+                                    <svg
+                                      key={starIndex}
+                                      className={`w-3 h-3 ${
+                                        starIndex < book.rating
+                                          ? "text-yellow-400 fill-current"
+                                          : "text-gray-600 fill-current"
+                                      }`}
+                                      viewBox="0 0 20 20"
+                                    >
+                                      <path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z" />
+                                    </svg>
+                                  ))}
+                                </div>
+                                <span className="text-white font-semibold text-xs ml-1">
                                   {book.rating}
                                 </span>
                                 <span className="text-gray-400 text-xs">
@@ -184,7 +197,7 @@ const CategoryPage = ({ category, title, emoji }) => {
                           <div className="flex-shrink-0">
                             <button
                               onClick={() => handleDownload(book)}
-                              className={`px-2 py-1 sm:px-3 sm:py-1.5 rounded-md font-medium text-xs transition-all duration-200 flex items-center gap-1 sm:gap-1.5 hover:scale-105 active:scale-95 ${
+                              className={`px-2 py-1 sm:px-3 sm:py-1.5 rounded-md font-medium text-xs transition-all duration-200 flex items-center gap-1 sm:gap-1.5 hover:scale-105 active:scale-95 cursor-pointer ${
                                 index % 3 === 0
                                   ? "bg-red-600 hover:bg-red-700 text-white"
                                   : index % 3 === 1
